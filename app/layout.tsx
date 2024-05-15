@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${allerta.className} bg-gray-200`}>
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden mx-8">
           <Navbar />
-          <main className="text-cream mx-4">{children}</main>
+          <main className="text-cream">{children}</main>
           {/* <Footer /> */}
         </div>
       </body>

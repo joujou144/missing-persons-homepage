@@ -21,11 +21,11 @@
   }
 
   .max-container {
-    @apply mx-auto max-w-[1440px];
+    @apply mx-auto max-w-[1300px] border;
   }
 
   .padding-container {
-    @apply px-6 lg:px-20 3xl:px-0;
+    @apply px-8 lg:px-14 3xl:px-0;
   }
 
   .flexCenter {
@@ -69,6 +69,14 @@
     @apply text-[32px] font-[700] leading-[120%];
   }
 
+  .bold-28 {
+    @apply text-[28px] font-[700];
+  }
+
+  .bold-24 {
+    @apply text-[24px] font-[700];
+  }
+
   .bold-20 {
     @apply text-[20px] font-[700];
   }
@@ -79,6 +87,10 @@
 
   .bold-16 {
     @apply text-[16px] font-[700];
+  }
+
+  .bold-15 {
+    @apply text-[15px] font-[700];
   }
 
   /* BUTTONS */
@@ -99,11 +111,11 @@
   }
 
   .pill-light {
-    @apply text-midnight border-2 border-cream bg-cream py-2 rounded-full;
+    @apply text-midnight border-2 border-cream bg-cream py-3 rounded-full;
   }
 
   .pill-dark {
-    @apply text-midnight border-2 border-midnight py-2 rounded-full;
+    @apply text-midnight border-2 border-midnight py-3 rounded-full;
   }
 }
 

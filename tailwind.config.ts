@@ -17,8 +17,8 @@ const config: Config = {
 
       colors: {
         midnight: "#090911",
-        // cream: "#E0D9D9",
-        cream: "#FFEDD5",
+        cream: "#E0D9D9",
+        // cream: "#FFEDD5",
 
         gray: {
           10: "#EEEEEE",

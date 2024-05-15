@@ -11,11 +11,7 @@ import { IoMenuSharp } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <nav
-      className={
-        "bg-transparent absolute py-4 mx-4 top-4 right-0 left-0 padding-container flexBetween z-10 rounded-t-lg border-b border-neutral-300"
-      }
-    >
+    <nav className="max-container padding-container absolute right-0 left-0 top-4 flexBetween py-6 rounded-t-xl border-b-neutral-300">
       <Link href="/">
         <Image
           src="/Logo-dark.svg"
