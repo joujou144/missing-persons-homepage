@@ -25,7 +25,7 @@
   }
 
   .padding-container {
-    @apply px-8 lg:px-14 3xl:px-0;
+    @apply px-6 lg:px-14;
   }
 
   .flexCenter {
@@ -51,14 +51,6 @@
 
   .regular-40 {
     @apply text-[40px] font-[400] leading-[120%];
-  }
-
-  .bold-64 {
-    @apply text-[64px] font-[700] leading-[120%];
-  }
-
-  .bold-52 {
-    @apply text-[52px] font-[700] leading-[120%];
   }
 
   .bold-40 {

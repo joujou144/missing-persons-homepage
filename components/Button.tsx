@@ -20,7 +20,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${variant} ${className} flexCenter gap-2`}
+      className={`${variant} ${className} flexCenter gap-1`}
       onClick={onClick}
     >
       {icon}

@@ -8,7 +8,7 @@ type PillProps = {
 
 const Pill = ({ label, variant, className }: PillProps) => {
   return (
-    <div className={`${variant} ${className} bold-15 lg:bold-20`}>{label}</div>
+    <div className={`${variant} ${className} bold-16 lg:bold-20`}>{label}</div>
   );
 };
 
