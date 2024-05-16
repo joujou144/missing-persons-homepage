@@ -11,7 +11,7 @@ import { IoMenuSharp } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <nav className="max-container padding-container absolute right-0 left-0 top-4 flexBetween py-6 rounded-t-xl border-b-neutral-300">
+    <nav className="z-40 bg-cream padding-container flexBetween py-6 absolute right-0 left-0">
       <Link href="/">
         <Image
           src="/Logo-dark.svg"
@@ -24,8 +24,9 @@ const Navbar = () => {
         <Navlinks />
         {/* Add AuthStatus */}
 
-        <LuUser2 size={20} />
+        <LuUser2 size={20} className="max-md:hidden block cursor-pointer" />
       </div>
+
       <IoMenuSharp
         size={25}
         className="md:hidden inline-block cursor-pointer"
@@ -45,7 +46,7 @@ const Navlinks = () => {
             href={href}
             // className={classNames({
             //   "nav-link": true,
-            //   "!text-shadow-sm": href === currentPath,
+            //   "!text-shadow-sm cursor-pointer": href === currentPath,
             // })}
             className="nav-link"
           >

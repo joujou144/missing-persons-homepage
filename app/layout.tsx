@@ -21,12 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${allerta.className} bg-gray-200`}>
-        <div className="relative overflow-hidden mx-8">
-          <Navbar />
-          <main className="text-cream">{children}</main>
-          {/* <Footer /> */}
-        </div>
+      <body className={`${allerta.className} bg-gray-200 relative `}>
+        {/* <Navbar /> */}
+        <main className="text-cream relative overflow-hidden mx-4">
+          {children}
+        </main>
+        {/* <Footer /> */}
       </body>
     </html>
   );

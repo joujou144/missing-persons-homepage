@@ -17,11 +17,11 @@
   }
 
   .nav-link {
-    @apply text-midnight hover:text-shadow-sm shadow-gray-30 transition-all;
+    @apply cursor-pointer text-midnight hover:text-shadow-sm shadow-gray-30 transition-all;
   }
 
   .max-container {
-    @apply mx-auto max-w-[1300px] border;
+    @apply mx-auto max-w-[1300px];
   }
 
   .padding-container {
@@ -95,7 +95,7 @@
   }
 
   .btn-dark {
-    @apply text-cream border-2 border-midnight bg-midnight px-5 py-3 rounded-full hover:text-shadow-sm shadow-cream transition-all;
+    @apply text-cream border-2 border-crimson bg-crimson px-5 py-3 rounded-full hover:text-shadow-sm shadow-cream transition-all;
   }
 
   .btn-light {

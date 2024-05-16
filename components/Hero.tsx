@@ -12,20 +12,21 @@ const Hero = () => {
   };
 
   return (
-    <section className="max-container py-60 md:py-[270px] relative my-4">
+    <section className="max-container py-52 lg:py-64 xl:py-[280px] mt-4 relative">
+      <div className="z-10 absolute inset-0 bg-black opacity-40 rounded-b-xl"></div>
       <Image
         src="/hero.jpg"
         alt="background image"
         fill={true}
         objectFit="cover"
-        className="rounded-xl -z-10"
+        className="rounded-xl"
       />
 
-      <div className=" flex flex-col items-start gap-4 text-midnight md:items-center md:text-center lg:max-w-[75%] md:max-w-[80%] mx-auto padding-container">
-        <h1 className="bold-18 md:bold-32 xl:bold-52 max-md:text-shadow-sm shadow-white">
+      <div className="padding-container w-fit md:w-3/4 lg:w-[60%] xl:w-[45%] flex flex-col items-start gap-4 xl:items-center xl:text-center xl:mx-auto">
+        <h1 className="z-20 bold-18 md:bold-32 xl:bold-52">
           LostInNL Missing Persons
         </h1>
-        <p className="text-[14px] md:text-[18px] md:max-w-[72%]">
+        <p className="z-20 text-[14px] md:text-[18px]">
           We store and disseminate information about individuals who go missing
           in Newfoundland.
         </p>
@@ -33,13 +34,11 @@ const Hero = () => {
           label="Add Missing Person"
           icon={<PiPlusBold />}
           type="button"
-          className="text-center text-[14px] xl:text-[16px]"
-          variant="btn-dark"
+          className="z-20 text-center text-[14px] xl:text-[16px]"
+          variant="btn-outline-light"
           onClick={handleClick}
         />
       </div>
-
-      {/* <p>Search. Hope. Find Them Alive.</p> */}
     </section>
   );
 };
