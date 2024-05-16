@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="max-container py-52 lg:py-64 xl:py-[280px] mt-4 relative">
+    <section className="max-container py-52 lg:py-64 xl:py-[280px] my-4 relative">
       <div className="z-10 absolute inset-0 bg-black opacity-40 rounded-b-xl"></div>
       <Image
         src="/hero.jpg"
