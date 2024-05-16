@@ -20,6 +20,10 @@
     @apply cursor-pointer text-midnight hover:text-shadow-sm shadow-gray-30 transition-all;
   }
 
+  .xl-container {
+    @apply mx-auto max-w-[1480px];
+  }
+
   .max-container {
     @apply mx-auto max-w-[1300px];
   }
