@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { PiPlusBold } from "react-icons/pi";
 
 type ButtonProps = {
   className?: string;
-  icon?: ReactNode;
+  icon?: boolean;
   label: string;
   type: "submit" | "button";
   variant?: "btn-light" | "btn-dark" | "btn-outline-dark" | "btn-outline-light";
@@ -23,7 +23,7 @@ const Button = ({
       className={`${variant} ${className} flexCenter gap-1 cursor-pointer`}
       onClick={onClick}
     >
-      {icon}
+      {icon && <PiPlusBold />}
       <label className="text-[14px]">{label}</label>
     </button>
   );

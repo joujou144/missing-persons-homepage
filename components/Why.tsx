@@ -4,7 +4,6 @@ import MissingPersons from "./MissingPersons";
 import { persons, REASONS, WHY_SLOGANS } from "@/constant";
 import Image from "next/image";
 import Button from "./Button";
-import { PiPlusBold } from "react-icons/pi";
 
 const Why = () => {
   return (
@@ -66,7 +65,7 @@ export const CallToAction = () => {
           type="button"
           variant="btn-light"
           label="Add Missing Person"
-          icon={<PiPlusBold />}
+          icon={true}
           className="self-start"
         />
       </div>

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Button from "./Button";
-import { PiPlusBold } from "react-icons/pi";
 import Image from "next/image";
 
 const Hero = () => {
@@ -32,7 +31,7 @@ const Hero = () => {
         </p>
         <Button
           label="Add Missing Person"
-          icon={<PiPlusBold />}
+          icon={true}
           type="button"
           className="z-20 text-center text-[14px] lg:text-[16px]"
           variant="btn-outline-light"
