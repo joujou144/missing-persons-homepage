@@ -6,7 +6,7 @@ type ButtonProps = {
   label: string;
   type: "submit" | "button";
   variant?: "btn-light" | "btn-dark" | "btn-outline-dark" | "btn-outline-light";
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 const Button = ({
@@ -24,7 +24,7 @@ const Button = ({
       onClick={onClick}
     >
       {icon}
-      <label>{label}</label>
+      <label className="text-[14px]">{label}</label>
     </button>
   );
 };

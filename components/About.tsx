@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="max-container py-4 lg:py-8">
-      <div className="mx-4 flex flex-col gap-6">
+    <section className="border-cream border-2 max-container py-4 lg:py-8">
+      <div className="mx-4 border-2 border-green-300 flex flex-col gap-6">
         <Pill
           label="Who we are"
           variant="pill-light"

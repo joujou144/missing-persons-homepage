@@ -107,11 +107,11 @@
   }
 
   .pill-light {
-    @apply text-midnight border-2 border-cream bg-cream py-3 rounded-full;
+    @apply text-midnight border-cream bg-cream py-3 rounded-full;
   }
 
   .pill-dark {
-    @apply text-cream border-2 border-midnight bg-midnight py-3 rounded-full;
+    @apply text-cream border-midnight bg-midnight py-3 rounded-full;
   }
 }
 
