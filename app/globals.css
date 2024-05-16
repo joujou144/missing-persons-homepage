@@ -107,7 +107,7 @@
   }
 
   .pill-dark {
-    @apply text-midnight border-2 border-midnight py-3 rounded-full;
+    @apply text-cream border-2 border-midnight bg-midnight py-3 rounded-full;
   }
 }
 
