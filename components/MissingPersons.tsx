@@ -19,7 +19,6 @@ const MissingPersons = ({ missing }: MissingPersonProps) => {
             width={300}
             height={50}
             objectFit="contain"
-            // className="flex-1 md:w-[225px] lg:w-[220px] xl:w-[275px]"
             className="flex-1 md:w-[250px] lg:w-[240px] xl:w-[290px]"
           />
           <DatePill createdAt={createdAt} />
@@ -30,7 +29,7 @@ const MissingPersons = ({ missing }: MissingPersonProps) => {
 
           <div className="text-[14px] py-2 flex gap-1 items-center">
             <GrLocationPin />
-            <p>{location}</p>
+            <p className="content-font tracking-wider">{location}</p>
           </div>
         </li>
       ))}
