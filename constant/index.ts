@@ -5,6 +5,13 @@ export const NAV_LINKS = [
   { href: "/", key: "contact", label: "Contact" },
 ];
 
+// ABOUT SLOGANS
+export const ABOUT_SLOGANS = [
+  { label: "Faith over fear" },
+  { label: "Don't lose hope" },
+  { label: "Keep your head up" },
+];
+
 // REASONS
 export const REASONS = [
   {

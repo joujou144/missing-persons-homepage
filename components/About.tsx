@@ -1,11 +1,12 @@
 import React from "react";
 import Pill from "./Pill";
 import Image from "next/image";
+import { ABOUT_SLOGANS } from "@/constant";
 
 const About = () => {
   return (
-    <section className="border-cream border-2 max-container py-4 lg:py-8">
-      <div className="mx-4 border-2 border-green-300 flex flex-col gap-6">
+    <section className="max-container py-4 lg:py-8">
+      <div className="mx-4 flex flex-col gap-6">
         <Pill
           label="Who we are"
           variant="pill-light"
@@ -17,7 +18,7 @@ const About = () => {
           temporibus nemo in.
         </h2>
 
-        <div className="flex justify-between gap-20 text-[14px] md:text-[15px] max-[950px]:flex-col max-[950px]:gap-10">
+        <div className="flex justify-between gap-20 text-[14px] md:text-[15px] lg:text-[16px] max-[950px]:flex-col max-[950px]:gap-10">
           <div className="flex flex-col justify-between gap-6 lg:w-1/2">
             <p>
               When designing for the web, whitespace is one of those tools you
@@ -51,28 +52,23 @@ const About = () => {
               <Image
                 src="/about.jpg"
                 alt="hope-image"
-                width={120}
+                width={100}
                 height={20}
-                className="rounded-xl"
+                className="rounded-xl md:w-[30%] xl:w-[28%]"
               />
-              <div className="flex flex-col justify-between text-shadow-sm shadow-gray-50">
-                <h3 className="bold-15 md:bold-18 lg:bold-24">
-                  Faith Over Fear
-                </h3>
-                <h3 className="bold-15 md:bold-18 lg:bold-24">
-                  {"Don't Lose Hope"}
-                </h3>
-                <h3 className="bold-15 md:bold-18 lg:bold-24">
-                  Keep Your Head Up
-                </h3>
+              <div className="flex flex-col justify-between">
+                {ABOUT_SLOGANS.map(({ label }) => (
+                  <h3
+                    key={label}
+                    className="bold-18 md:bold-20 lg:bold-24 xl:text-[26px]"
+                  >
+                    {label}
+                  </h3>
+                ))}
               </div>
             </div>
           </div>
         </div>
-
-        {/* <h4 className="text-center mt-10 bold-28 max-[950px]:bold-24 max-[650px]:bold-18">
-        Search. Hope. Find Them Alive.
-      </h4> */}
       </div>
     </section>
   );
