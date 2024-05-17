@@ -1,7 +1,7 @@
 import React from "react";
 import Pill from "./Pill";
 import MissingPersons from "./MissingPersons";
-import { persons, REASONS, WHY_SLOGANS } from "@/constant";
+import { CTA_TEXT, persons, REASONS, WHY_SLOGANS } from "@/constant";
 import Image from "next/image";
 import Button from "./Button";
 
@@ -54,10 +54,7 @@ export const CallToAction = () => {
   return (
     <div className=" pb-6 lg:pb-4 flex flex-col gap-6">
       <p className="font-size md:w-3/4 lg:w-full xl:w-3/4 text-center lg:text-left lg:self-start sm:self-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        placeat qui doloremque consectetur sequi, quo hic? A similique minus
-        magni odit iure ipsa dicta doloremque eos ea voluptate? Odit,
-        voluptates.
+        {CTA_TEXT}
       </p>
 
       <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between md:flex-col md:items-center md:gap-6">

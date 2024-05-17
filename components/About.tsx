@@ -1,7 +1,13 @@
 import React from "react";
 import Pill from "./Pill";
 import Image from "next/image";
-import { ABOUT_SLOGANS } from "@/constant";
+import {
+  ABOUT_HEADLINE,
+  ABOUT_LEFT_CONTENT,
+  ABOUT_RIGHT_CONTENT,
+  ABOUT_SLOGANS,
+  BOX_CONTENT,
+} from "@/constant";
 
 const About = () => {
   return (
@@ -12,40 +18,22 @@ const About = () => {
           variant="pill-light"
           className="padding-container self-start"
         />
-        <h2 className="bold-16 md:bold-20 lg:bold-24">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          culpa perferendis quae quo optio architecto laboriosam neque
-          temporibus nemo in.
-        </h2>
+        <h2 className="bold-16 md:bold-20 lg:bold-24">{ABOUT_HEADLINE}</h2>
 
         <div className="flex justify-between gap-20 font-size max-[950px]:flex-col max-[950px]:gap-10">
-          <div className="flex flex-col justify-between gap-6 lg:w-1/2">
-            <p>
-              When designing for the web, whitespace is one of those tools you
-              should never take for granted and should always keep a good handle
-              on. Something to keep in mind: the things you scale upwards often
-              become focal points, so, be sure to scale with care. With great
-              scale comes great responsibility.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              amet ea ad, optio unde natus illum deserunt. Atque, voluptates
-              quis?
-            </p>
+          <div className="flex flex-col gap-6 lg:justify-between lg:w-1/2">
+            {ABOUT_LEFT_CONTENT.map(({ content }) => (
+              <p key={content}>{content}</p>
+            ))}
+
             <p className="bg-cream padding-container py-4 text-midnight rounded-xl">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Similique, eligendi. Asperiores odit enim aperiam aliquam incidunt
-              exercitationem, ab voluptates facere voluptatibus.
+              {BOX_CONTENT}
             </p>
           </div>
 
           <div className="flex flex-col gap-10 min-[680px]:flex-row min-[680px]:justify-between min-[950px]:flex-col lg:w-1/2">
             <p className="min-[680px]:w-[45%] min-[950px]:w-full">
-              When designing for the web, whitespace is one of those tools you
-              should never take for granted and should always keep a good handle
-              on. Something to keep in mind: the things you scale upwards often
-              become focal points, so, be sure to scale with care. With great
-              scale comes great responsibility.
+              {ABOUT_RIGHT_CONTENT}
             </p>
 
             <div className="min-[680px]:w-1/2 min-[950px]:w-full flex gap-4 md:gap-8 lg:gap-10">
