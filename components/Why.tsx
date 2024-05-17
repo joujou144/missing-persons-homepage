@@ -1,9 +1,8 @@
-import React from "react";
-import Pill from "./Pill";
-import MissingPersons from "./MissingPersons";
 import { CTA_TEXT, persons, REASONS, WHY_SLOGANS } from "@/constant";
 import Image from "next/image";
 import Button from "./Button";
+import Heading from "./Heading";
+import MissingPersons from "./MissingPersons";
 
 const Why = () => {
   return (
@@ -11,11 +10,7 @@ const Why = () => {
       <div className="mx-4 lg:flex lg:justify-between lg:gap-12">
         <div className="lg:w-[49%] flex flex-col gap-6 lg:justify-between">
           <div className=" bg-cream rounded-xl p-6 flex flex-col text-midnight">
-            <Pill
-              label="The Reason"
-              variant="pill-dark"
-              className="padding-container self-start"
-            />
+            <Heading variant="header-dark" label="the reason" />
 
             <ul>
               {REASONS.map(({ reason }) => (

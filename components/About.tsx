@@ -1,5 +1,5 @@
 import React from "react";
-import Pill from "./Pill";
+import Heading from "./Heading";
 import Image from "next/image";
 import {
   ABOUT_HEADLINE,
@@ -11,14 +11,11 @@ import {
 
 const About = () => {
   return (
-    <section className="max-container py-4 lg:py-8">
+    <section className="max-container py-14 lg:py-18">
       <div className="mx-4 flex flex-col gap-6">
-        <Pill
-          label="Who we are"
-          variant="pill-light"
-          className="padding-container self-start"
-        />
-        <h2 className="bold-16 md:bold-24 lg:bold-28 italic">
+        <Heading label="who we are" variant="header-light" />
+
+        <h2 className="bold-20 md:bold-24 lg:bold-28 italic">
           {ABOUT_HEADLINE}
         </h2>
 
