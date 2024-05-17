@@ -18,7 +18,9 @@ const About = () => {
           variant="pill-light"
           className="padding-container self-start"
         />
-        <h2 className="bold-16 md:bold-20 lg:bold-24">{ABOUT_HEADLINE}</h2>
+        <h2 className="bold-16 md:bold-24 lg:bold-28 italic">
+          {ABOUT_HEADLINE}
+        </h2>
 
         <div className="flex justify-between gap-20 font-size max-[950px]:flex-col max-[950px]:gap-10">
           <div className="flex flex-col gap-6 lg:justify-between lg:w-1/2">
@@ -48,7 +50,7 @@ const About = () => {
                 {ABOUT_SLOGANS.map(({ label }) => (
                   <h3
                     key={label}
-                    className="bold-18 md:bold-20 lg:bold-24 xl:text-[26px]"
+                    className="bold-18 md:bold-20 lg:bold-24 xl:text-[28px] italic"
                   >
                     {label}
                   </h3>

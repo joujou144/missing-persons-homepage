@@ -7,27 +7,25 @@ export const NAV_LINKS = [
 
 // ABOUT HEADLINE
 export const ABOUT_HEADLINE =
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum culpa perferendis quae quo optio architecto laboriosam neque temporibus nemo in.";
-
+  "Empowering communities through technology, we strive to bring hope by finding missing loved ones swiftly and effectively.";
 // ABOUT LEFT CONTENT
 export const ABOUT_LEFT_CONTENT = [
   {
     content:
-      " When designing for the web, whitespace is one of those tools you should never take for granted and should always keep a good handle on. Something to keep in mind: the things you scale upwards often become focal points, so, be sure to scale with care. With great scale comes great responsibility.",
+      "Founded with a mission to alleviate the distress of missing persons' families, our company harnesses advanced technology and a dedicated team to locate individuals efficiently. With a compassionate approach, we provide support to communities and authorities, striving to reunite loved ones and bring solace in times of uncertainty.",
   },
   {
     content:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam amet ea ad, optio unde natus illum deserunt. Atque, voluptates quis?",
+      "Committed to reuniting families, our passion and dedication drive us to tirelessly search for missing individuals with compassion and expertise.",
   },
 ];
 
 // ABOUT BOX CONTENT
 export const BOX_CONTENT =
-  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, eligendi. Asperiores odit enim aperiam aliquam incidunt exercitationem, ab voluptates facere voluptatibus.";
-
+  "Through close collaboration with local authorities, we've successfully reunited families. Our expertise and technology ensure effective search operations.";
 // ABOUT RIGHT CONTENT
 export const ABOUT_RIGHT_CONTENT =
-  "  When designing for the web, whitespace is one of those tools you should never take for granted and should always keep a good handle on. Something to keep in mind: the things you scale upwards often become focal points, so, be sure to scale with care. With great scale comes great responsibility.";
+  "Driven by a commitment to human welfare, we prioritize transparency and collaboration in every aspect of our work. Through our comprehensive database and proactive outreach efforts, we endeavor to create a safer world where no disappearance goes unnoticed. At our core, we stand as a beacon of hope and solidarity for those in need.";
 
 // ABOUT SLOGANS
 export const ABOUT_SLOGANS = [
@@ -40,11 +38,11 @@ export const ABOUT_SLOGANS = [
 export const REASONS = [
   {
     reason:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus provident sequi, cum architecto libero quo nulla accusantium expedita distinctio!",
+      "Our dedication stems from the rising number of missing individuals annually, driving our urgent mission. We believe in offering hope and closure to affected families, alleviating their anguish with every successful reunion.",
   },
   {
     reason:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, nam!",
+      "As missing cases escalate, our resolve strengthens to provide solace and support to affected communities.",
   },
 ];
 
@@ -57,8 +55,7 @@ export const WHY_SLOGANS = [
 
 // CTA TEXT
 export const CTA_TEXT =
-  " Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium placeat qui doloremque consectetur sequi, quo hic? A similique minus magni odit iure ipsa dicta doloremque eos ea voluptate? Odit, voluptates.";
-
+  "Join us in our mission to reunite families and bring solace to communities. Together, we can make a difference in the lives of those affected by missing individuals.";
 // MISSING PERSONS
 export type PersonProps = {
   name: string;
