@@ -25,7 +25,7 @@ const About = () => {
               <p key={content}>{content}</p>
             ))}
 
-            <p className="bg-cream padding-container py-4 text-midnight rounded-xl">
+            <p className="bg-cream p-6 text-midnight rounded-xl">
               {BOX_CONTENT}
             </p>
           </div>
@@ -47,7 +47,7 @@ const About = () => {
                 {ABOUT_SLOGANS.map(({ label }) => (
                   <h3
                     key={label}
-                    className="bold-18 md:bold-20 lg:bold-24 xl:text-[28px] italic"
+                    className="bold-18 md:bold-20 lg:bold-24 xl:text-[28px] header-font italic"
                   >
                     {label}
                   </h3>
