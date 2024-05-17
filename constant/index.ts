@@ -54,8 +54,15 @@ export const WHY_SLOGANS = [
 ];
 
 // CTA TEXT
+export const CTA_INTRO =
+  "Inspired by compassion and driven by purpose, our organization is dedicated to addressing the distress of missing persons' families. With each passing day, our resolve strengthens to harness technology and community support in our quest to reunite loved ones. Your involvement is crucial in our mission.";
+
 export const CTA_TEXT =
   "Join us in our mission to reunite families and bring solace to communities. Together, we can make a difference in the lives of those affected by missing individuals.";
+
+// MAP TEXT
+export const MAP_TEXT = "Search. Hope. Find them alive.";
+
 // MISSING PERSONS
 export type PersonProps = {
   name: string;

@@ -11,7 +11,7 @@ import {
 
 const About = () => {
   return (
-    <section className="max-container py-14 lg:py-18">
+    <section className="max-container py-8 lg:py-12">
       <div className="mx-4 flex flex-col gap-6">
         <Heading label="who we are" variant="header-light" />
 
@@ -19,7 +19,7 @@ const About = () => {
           {ABOUT_HEADLINE}
         </h2>
 
-        <div className="flex justify-between gap-10 font-size max-[950px]:flex-col">
+        <div className="flex justify-between gap-10 content-size max-[950px]:flex-col">
           <div className="flex flex-col gap-6 lg:justify-between lg:w-1/2">
             {ABOUT_LEFT_CONTENT.map(({ content }) => (
               <p key={content}>{content}</p>
