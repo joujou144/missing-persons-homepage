@@ -18,7 +18,7 @@ const About = () => {
           temporibus nemo in.
         </h2>
 
-        <div className="flex justify-between gap-20 text-[14px] md:text-[15px] lg:text-[16px] max-[950px]:flex-col max-[950px]:gap-10">
+        <div className="flex justify-between gap-20 font-size max-[950px]:flex-col max-[950px]:gap-10">
           <div className="flex flex-col justify-between gap-6 lg:w-1/2">
             <p>
               When designing for the web, whitespace is one of those tools you

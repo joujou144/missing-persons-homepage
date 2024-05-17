@@ -21,7 +21,7 @@ const Hero = () => {
         className="bg-bottom"
       />
 
-      <div className="padding-container w-fit md:w-3/4 lg:w-[50%] xl:w-[40%] flex flex-col items-start gap-4 lg:items-center lg:text-center lg:mx-auto">
+      <div className="padding-container w-fit md:w-3/4 lg:w-[50%] xl:w-[40%] flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
         <h1 className="z-20 bold-18 md:bold-32 xl:bold-52">
           LostInNL Missing Persons
         </h1>
@@ -33,7 +33,7 @@ const Hero = () => {
           label="Add Missing Person"
           icon={true}
           type="button"
-          className="z-20 text-center text-[14px] lg:text-[16px]"
+          className="z-20 text-center mt-2"
           variant="btn-outline-light"
           onClick={handleClick}
         />

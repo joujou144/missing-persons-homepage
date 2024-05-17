@@ -19,10 +19,7 @@ const Why = () => {
 
             <ul>
               {REASONS.map(({ reason }) => (
-                <p
-                  key={reason}
-                  className="my-6 text-[14px] md:text-[15px] lg:text-[16px]"
-                >
+                <p key={reason} className="my-6 font-size">
                   {reason}
                 </p>
               ))}
@@ -56,7 +53,7 @@ const Why = () => {
 export const CallToAction = () => {
   return (
     <div className=" pb-6 lg:pb-4 flex flex-col gap-6">
-      <p className="text-[14px] md:text-[15px] md:w-3/4 lg:text-[16px] lg:w-full xl:w-3/4 text-center lg:text-left lg:self-start sm:self-center">
+      <p className="font-size md:w-3/4 lg:w-full xl:w-3/4 text-center lg:text-left lg:self-start sm:self-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         placeat qui doloremque consectetur sequi, quo hic? A similique minus
         magni odit iure ipsa dicta doloremque eos ea voluptate? Odit,

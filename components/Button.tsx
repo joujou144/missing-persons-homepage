@@ -24,7 +24,7 @@ const Button = ({
       onClick={onClick}
     >
       {icon && <PiPlusBold />}
-      <label className="text-[14px]">{label}</label>
+      <label className="font-size">{label}</label>
     </button>
   );
 };
