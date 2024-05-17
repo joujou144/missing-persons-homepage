@@ -7,40 +7,46 @@ import Button from "./Button";
 
 const Why = () => {
   return (
-    <section className="xl-container border-red-500 border-2 py-4 lg:py-8">
-      <div className="max-container bg-cream border-2 border-blue-500 py-4">
-        <div className="mx-4 flex flex-col text-midnight">
-          <Pill
-            label="The Reason"
-            variant="pill-dark"
-            className="padding-container self-start"
-          />
+    <section className="max-container py-4 lg:py-8">
+      <div className="mx-4 lg:flex lg:justify-between lg:gap-12">
+        <div className="lg:w-[49%] flex flex-col gap-6 lg:justify-between">
+          <div className=" bg-cream rounded-xl p-6 flex flex-col text-midnight">
+            <Pill
+              label="The Reason"
+              variant="pill-dark"
+              className="padding-container self-start"
+            />
 
-          <ul>
-            {REASONS.map(({ reason }) => (
-              <p key={reason} className="my-6">
-                {reason}
-              </p>
-            ))}
-          </ul>
+            <ul>
+              {REASONS.map(({ reason }) => (
+                <p
+                  key={reason}
+                  className="my-6 text-[14px] md:text-[15px] lg:text-[16px]"
+                >
+                  {reason}
+                </p>
+              ))}
+            </ul>
 
-          <ul className="self-end text-right">
-            {WHY_SLOGANS.map(({ label }) => (
-              <h3 key={label} className="my-2 bold-20 te">
-                {label}
-              </h3>
-            ))}
-          </ul>
+            <ul className="self-end text-right">
+              {WHY_SLOGANS.map(({ label }) => (
+                <h3
+                  key={label}
+                  className="mt-2 bold-18 min-[350px]:bold-20 md:bold-28"
+                >
+                  {label}
+                </h3>
+              ))}
+            </ul>
+          </div>
+          <CallToAction />
         </div>
-      </div>
 
-      <div className="max-container flex-1 border-2 border-purple-300">
-        <div className="mx-4">
+        <div className="lg:w-1/2 order-first flex-1">
           <MissingPersons
             missing={persons}
-            className="flex flex-col gap-4 border-2 border-yellow-200"
+            className="flex flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-between"
           />
-          <CallToAction />
         </div>
       </div>
     </section>
@@ -49,24 +55,28 @@ const Why = () => {
 
 export const CallToAction = () => {
   return (
-    <div className="">
-      <p className="text-[14px] w-full md:w-60">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, rem!
+    <div className=" pb-6 lg:pb-4 flex flex-col gap-6">
+      <p className="text-[14px] md:text-[15px] md:w-3/4 lg:text-[16px] lg:w-full xl:w-3/4 text-center lg:text-left lg:self-start sm:self-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        placeat qui doloremque consectetur sequi, quo hic? A similique minus
+        magni odit iure ipsa dicta doloremque eos ea voluptate? Odit,
+        voluptates.
       </p>
-      <div className="flex flex-col gap-4">
+
+      <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between md:flex-col md:items-center md:gap-6">
         <Image
           src="/Logo-light.svg"
           alt="LostInNL-logo"
-          width={80}
+          width={120}
           height={20}
-          className="mt-4"
+          className=""
         />
         <Button
           type="button"
           variant="btn-light"
           label="Add Missing Person"
           icon={true}
-          className="self-start"
+          className="lg:order-first"
         />
       </div>
     </div>

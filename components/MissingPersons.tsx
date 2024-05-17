@@ -13,14 +13,14 @@ const MissingPersons = ({ missing, className }: MissingPersonProps) => {
   return (
     <ul className={className}>
       {missing.map(({ name, imageSrc, location, createdAt }) => (
-        <li key={name} className="relative ">
+        <li key={name} className="relative">
           <Image
             src={imageSrc}
             alt={name}
             width={300}
             height={50}
             objectFit="contain"
-            objectPosition="center"
+            className="flex-1 md:w-[225px] lg:w-[220px] xl:w-[275px]"
           />
           <DatePill createdAt={createdAt} />
           <div className="flexBetween py-2 border-[1px] border-b-gray-10">
