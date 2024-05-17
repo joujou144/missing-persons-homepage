@@ -21,11 +21,11 @@ const Hero = () => {
         className="bg-bottom"
       />
 
-      <div className="padding-container w-fit md:w-3/4 lg:w-[50%] xl:w-[40%] flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
-        <h1 className="z-20 bold-18 md:bold-32 xl:bold-52">
+      <div className="padding-container w-fit flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
+        <h1 className="z-20 bold-20 min-[380px]:bold-24 md:bold-32 xl:bold-52">
           LostInNL Missing Persons
         </h1>
-        <p className="z-20 text-[14px] md:text-[18px]">
+        <p className="z-20 text-[14px] md:text-[18px] max-w-xs md:max-w-md lg:max-w-[50%]">
           We store and disseminate information about individuals who go missing
           in Newfoundland.
         </p>
