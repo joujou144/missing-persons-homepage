@@ -66,37 +66,37 @@ export type PersonProps = {
 
 export const persons: PersonProps[] = [
   {
-    name: "Jane Doe 1",
+    name: "Alice Smith",
     imageSrc: "/jane-doe-1.png",
     location: "Newfoundland",
     createdAt: "Jan 2024",
   },
   {
-    name: "Jon Doe 1",
+    name: "Brad Smith",
     imageSrc: "/jon-doe-1.png",
     location: "Newfoundland",
     createdAt: "Jan 2024",
   },
   {
-    name: "Jon Doe 2",
+    name: "Jacob Smith",
     imageSrc: "/jon-doe-2.png",
     location: "Newfoundland",
     createdAt: "Jan 2024",
   },
   {
-    name: "Jane Doe 3",
+    name: "Jessica Smith",
     imageSrc: "/jane-doe-3.png",
     location: "Newfoundland",
     createdAt: "Jan 2024",
   },
   {
-    name: "Jon Doe 3",
+    name: "Isaac Smith",
     imageSrc: "/jon-doe-3.png",
     location: "Newfoundland",
     createdAt: "Jan 2024",
   },
   {
-    name: "Jane Doe 2",
+    name: "Penelope Smith",
     imageSrc: "/jane-doe-2.png",
     location: "Newfoundland",
     createdAt: "Jan 2024",

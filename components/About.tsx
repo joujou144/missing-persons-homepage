@@ -19,7 +19,7 @@ const About = () => {
           {ABOUT_HEADLINE}
         </h2>
 
-        <div className="flex justify-between gap-20 font-size max-[950px]:flex-col max-[950px]:gap-10">
+        <div className="flex justify-between gap-10 font-size max-[950px]:flex-col">
           <div className="flex flex-col gap-6 lg:justify-between lg:w-1/2">
             {ABOUT_LEFT_CONTENT.map(({ content }) => (
               <p key={content}>{content}</p>

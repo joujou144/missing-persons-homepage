@@ -7,8 +7,8 @@ import MissingPersons from "./MissingPersons";
 const Why = () => {
   return (
     <section className="max-container py-4 lg:py-8">
-      <div className="mx-4 lg:flex lg:justify-between lg:gap-12">
-        <div className="lg:w-[49%] flex flex-col gap-6 lg:justify-between">
+      <div className="mx-4 lg:flex lg:justify-between lg:gap-10">
+        <div className="lg:w-1/2 flex flex-col gap-6 lg:justify-between">
           <div className=" bg-cream rounded-xl p-6 flex flex-col text-midnight">
             <Heading variant="header-dark" label="the reason" />
 
@@ -34,11 +34,8 @@ const Why = () => {
           <CallToAction />
         </div>
 
-        <div className="lg:w-1/2 order-first flex-1">
-          <MissingPersons
-            missing={persons}
-            className="flex flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-between"
-          />
+        <div className="lg:w-1/2 order-first md:my-6 lg:my-0">
+          <MissingPersons missing={persons} />
         </div>
       </div>
     </section>
