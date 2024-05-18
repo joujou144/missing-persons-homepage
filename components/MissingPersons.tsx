@@ -19,7 +19,7 @@ const MissingPersons = ({ missing }: MissingPersonProps) => {
             width={300}
             height={50}
             objectFit="contain"
-            className="flex-1 md:w-[250px] lg:w-[240px] xl:w-[290px] grayscale hover:grayscale-0 transition-all"
+            className="flex-1 md:w-[250px] lg:w-[240px] xl:w-[290px] image-grayscale"
           />
           <DatePill createdAt={createdAt} />
           <div className="flexBetween py-2 border-[1px] border-b-gray-10">

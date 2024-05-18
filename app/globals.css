@@ -51,6 +51,10 @@
     @apply flex items-center justify-start;
   }
 
+  .image-grayscale {
+    @apply grayscale transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-90;
+  }
+
   /* FONTS */
 
   .header-light {
