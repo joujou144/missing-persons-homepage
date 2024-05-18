@@ -35,10 +35,6 @@
     @apply mx-auto max-w-[1300px];
   }
 
-  .padding-container {
-    @apply px-6 lg:px-14;
-  }
-
   .flexCenter {
     @apply flex items-center justify-center;
   }

@@ -12,7 +12,7 @@ import {
 const About = () => {
   return (
     <section className="max-container py-8 lg:py-12">
-      <div className="mx-4 flex flex-col gap-6">
+      <div className="mx-6 flex flex-col gap-6">
         <Heading label="who we are" variant="header-light" />
 
         <h2 className="bold-20 md:bold-24 lg:bold-28 italic">

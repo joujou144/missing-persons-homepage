@@ -1,9 +1,9 @@
-import React from "react";
+import { COPYRIGHT } from "@/constant";
 
 const Footer = () => {
   return (
-    <footer className="py-2 border-2 border-pink-400 text-neutral">
-      Footer
+    <footer className="max-container py-6 text-center content-size text-cream">
+      {COPYRIGHT}
     </footer>
   );
 };

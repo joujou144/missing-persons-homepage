@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Allerta_Stencil, Assistant } from "next/font/google";
+import { Allerta_Stencil } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${allerta.className} bg-gray-200 relative `}>
         {/* <Navbar /> */}
         <main className="text-cream relative overflow-hidden">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

@@ -14,9 +14,9 @@ import MissingPersons from "./MissingPersons";
 
 const Why = () => {
   return (
-    <section className="xl-container relative py-8 lg:py-12">
+    <section className="xl-container relative py-8 lg:pt-12">
       <div className="max-container">
-        <div className="mx-4 lg:flex lg:justify-between lg:gap-10">
+        <div className="mx-6 lg:flex lg:justify-between lg:gap-10">
           <div className="lg:w-1/2 flex flex-col gap-6 lg:justify-between">
             <div className=" bg-cream rounded-xl p-6 flex flex-col text-midnight">
               <Heading variant="header-dark" label="the reason" />
@@ -50,7 +50,7 @@ const Why = () => {
       </div>
       <div className="bg-gray-20 content-font text-[14px] py-2 text-midnight">
         <div className="max-container">
-          <p className="mx-4">{MAP_DATE}</p>
+          <p className="mx-6">{MAP_DATE}</p>
         </div>
       </div>
       <Image
