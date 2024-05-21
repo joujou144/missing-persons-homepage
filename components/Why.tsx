@@ -17,8 +17,8 @@ const Why = () => {
   return (
     <section className="xl-container relative pt-8 lg:pt-12">
       <div className="max-container">
-        <div className="mx-6 lg:flex lg:justify-between lg:gap-10">
-          <div className="lg:w-1/2 flex flex-col gap-6 lg:justify-between">
+        <div className="mx-6 lg:flex lg:justify-between xl:gap-10">
+          <div className="lg:w-[40%] xl:w-1/2 border-2 flex flex-col gap-6 lg:justify-between">
             <div className=" bg-cream rounded-xl p-6 flex flex-col text-midnight">
               <Heading variant="header-dark" label="the reason" />
 
@@ -41,9 +41,10 @@ const Why = () => {
             <CallToAction />
           </div>
 
-          <div className="lg:w-1/2 order-first md:my-6 lg:my-0">
-            <MissingPersons missing={persons} />
-          </div>
+          <MissingPersons
+            missing={persons}
+            className="lg:w-[55%] xl:w-1/2 order-first md:my-6 lg:my-0"
+          />
         </div>
         <p className="text-center capitalize bold-content mt-6 mb-10">
           {MAP_TEXT}
