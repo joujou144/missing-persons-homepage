@@ -106,20 +106,13 @@
   }
 
   /* BUTTONS */
-  .btn-outline-dark {
-    @apply text-midnight border-2 border-midnight px-5 py-3 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all;
-  }
 
   .btn-outline-light {
-    @apply text-cream border-2 border-cream px-5 py-3 rounded-full hover:text-shadow-sm shadow-gray-90 transition-all;
-  }
-
-  .btn-dark {
-    @apply text-cream border-2 border-crimson bg-crimson px-5 py-3 rounded-full hover:text-shadow-sm shadow-cream transition-all;
+    @apply text-cream border-2 border-cream px-5 py-2.5 rounded-full hover:text-shadow-sm shadow-gray-90 transition-all;
   }
 
   .btn-light {
-    @apply text-midnight border-2 border-cream bg-cream px-5 py-3 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all;
+    @apply text-midnight border-2 border-cream bg-cream px-5 py-2 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all;
   }
 }
 
