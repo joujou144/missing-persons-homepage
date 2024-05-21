@@ -82,7 +82,8 @@ export const ContactForm = ({ className }: { className: string }) => {
         // value={value}
         placeholder="Message"
         // onChange={handleChange}
-        className="p-2 bg-gray-70 h-[150px] border-b-[1px] border-gray-30 resize-none w-full outline-none"
+        rows={6}
+        className="p-2 bg-gray-70 border-b-[1px] border-gray-30 resize-none w-full outline-none"
       />
 
       <Button
