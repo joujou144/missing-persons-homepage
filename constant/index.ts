@@ -65,6 +65,7 @@ export const MAP_TEXT = "Search. Hope. Find them alive.";
 
 // MAP DATE
 export const MAP_DATE = "Updated as of May 30, 2024";
+export const MAP_INFO = "Contact your local authority for additional updates";
 
 // MISSING PERSONS
 export type PersonProps = {

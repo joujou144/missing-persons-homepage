@@ -2,6 +2,7 @@ import {
   CTA_INTRO,
   CTA_TEXT,
   MAP_DATE,
+  MAP_INFO,
   MAP_TEXT,
   persons,
   REASONS,
@@ -96,7 +97,11 @@ export const Map = () => {
         height={50}
         className="w-full image-grayscale"
       />
-      <div className="bg-gray-20 py-5 "></div>
+      <div className="bg-gray-20 content-font text-[14px] py-2 text-midnight">
+        <div className="max-container">
+          <p className="mx-6 text-right">{MAP_INFO}</p>
+        </div>
+      </div>
     </>
   );
 };
