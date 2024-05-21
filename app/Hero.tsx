@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "./Button";
+import Button from "../components/Button";
 import Image from "next/image";
 
 const Hero = () => {

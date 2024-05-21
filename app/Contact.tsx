@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
 import Image from "next/image";
 import { CONTACT, FOOTER_LINKS } from "@/constant";
-import Button from "./Button";
+import Button from "../components/Button";
 
 const Contact = () => {
   return (

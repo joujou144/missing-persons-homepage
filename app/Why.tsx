@@ -9,9 +9,9 @@ import {
   WHY_SLOGANS,
 } from "@/constant";
 import Image from "next/image";
-import Button from "./Button";
-import Heading from "./Heading";
-import MissingPersons from "./MissingPersons";
+import Button from "../components/Button";
+import Heading from "../components/Heading";
+import MissingPersons from "../components/MissingPersons";
 
 const Why = () => {
   return (
