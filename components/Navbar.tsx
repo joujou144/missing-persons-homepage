@@ -48,7 +48,7 @@ const Navlinks = () => {
             //   "nav-link": true,
             //   "!text-shadow-sm cursor-pointer": href === currentPath,
             // })}
-            className="nav-link"
+            className="links"
           >
             {label}
           </Link>

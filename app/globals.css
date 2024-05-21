@@ -23,7 +23,7 @@
     text-wrap: balance;
   }
 
-  .nav-link {
+  .links {
     @apply cursor-pointer text-midnight hover:text-shadow-sm shadow-gray-30 transition-all;
   }
 

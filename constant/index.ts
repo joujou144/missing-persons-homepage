@@ -115,20 +115,27 @@ export const persons: PersonProps[] = [
 
 // FOOTER SECTION
 export const COPYRIGHT = "Copyright © 2024 LostinNL. All Rights Reserved.";
+
+export const CONTACT = [
+  {
+    content:
+      "  Email, call or complete the form to learn how we could assist you.",
+  },
+  { content: "info@lostinnl.com" },
+  { content: "(+123) 456 789" },
+];
+
 export const FOOTER_LINKS = [
   {
-    title: "Learn More",
-    links: [
-      "About Hilink",
-      "Press Releases",
-      "Environment",
-      "Jobs",
-      "Privacy Policy",
-      "Contact Us",
-    ],
+    title: "Links",
+    links: ["Privacy Policy", "Cookie Policy", "Terms & Conditions"],
   },
   {
-    title: "Our Community",
-    links: ["Climbing xixixi", "Hiking hilink", "Hilink kinthill"],
+    title: "Support",
+    links: ["Help & FAQ", "Community", "Press & Media"],
+  },
+  {
+    title: "Social",
+    links: ["Twitter", "Facebook", "LinkedIn"],
   },
 ];
