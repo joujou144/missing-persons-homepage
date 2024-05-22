@@ -2,21 +2,21 @@
 
 import Button from "./Button";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { contactFormSchema } from "@/app/utils/schemaValidation";
 import { z } from "zod";
 import { useState } from "react";
 import ErrorMessage from "./ErrorMessage";
+import { toast } from "sonner";
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export const ContactForm = ({ className }: { className: string }) => {
-  const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   const {
-    control,
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<ContactFormData>({
@@ -24,11 +24,14 @@ export const ContactForm = ({ className }: { className: string }) => {
   });
 
   const onSubmit = handleSubmit(async (data) => {
+    // const result = await somefunction(data)
     try {
       setSubmitting(true);
       //post data
+      toast.success("Your message has been sent!");
+      reset();
     } catch (error) {
-      setError("Unable to send message. Please try again.");
+      toast.error("Something went wrong. Please try again.");
       setSubmitting(false);
     }
   });
@@ -62,9 +65,7 @@ export const ContactForm = ({ className }: { className: string }) => {
 
       <div>
         <textarea
-          // value={value}
           placeholder="Message"
-          // onChange={handleChange}
           rows={6}
           {...register("message")}
           className="p-2 bg-gray-70 border-b-[1px] border-gray-30 w-full resize-none outline-none"
