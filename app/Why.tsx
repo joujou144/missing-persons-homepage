@@ -15,7 +15,7 @@ import MissingPersons from "../components/MissingPersons";
 
 const Why = () => {
   return (
-    <section className="xl-container relative pt-8 lg:pt-12">
+    <section id="why" className="xl-container relative pt-8 lg:pt-24">
       <div className="max-container">
         <div className="mx-4 lg:flex lg:justify-between xl:gap-10">
           <div className="lg:w-[40%] xl:w-1/2 border-2 flex flex-col gap-6 lg:justify-between">

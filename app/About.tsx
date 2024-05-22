@@ -11,7 +11,7 @@ import {
 
 const About = () => {
   return (
-    <section className="max-container py-8 lg:py-12">
+    <section id="about" className="max-container py-8 lg:pt-24">
       <div className="mx-4 flex flex-col gap-6">
         <Heading label="who we are" variant="header-light" />
 

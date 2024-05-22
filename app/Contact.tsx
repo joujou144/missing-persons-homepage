@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 const Contact = () => {
   return (
-    <section className="xl-container bg-cream">
+    <section id="contact" className="xl-container bg-cream">
       <div className="max-container">
         <div className="mx-4 py-8 flex flex-col min-[800px]:flex-row min-[800px]:justify-between gap-6">
           <ContactInformation className="min-[800px]:w-[62%] flex flex-col justify-between gap-4 min-[800px]:pr-4" />

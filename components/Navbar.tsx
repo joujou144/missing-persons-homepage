@@ -1,26 +1,45 @@
 "use client";
 
+import { NAV_LINKS } from "@/constant";
+import classnames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
-import React, { useState } from "react";
-import { NAV_LINKS } from "@/constant";
-import classnames from "classnames";
-import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
-import classNames from "classnames";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [bgStyle, setBgStyle] = useState(
+    "bg-transparent border-b-[1px] border-gray-20"
+  );
+
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 100) {
+        setBgStyle("bg-cream shadow-md shadow-gray-20");
+      } else {
+        setBgStyle("bg-transparent border-b-[1px] border-gray-20");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
+
   return (
-    <nav className="xl-container z-40 bg-none fixed right-0 left-0 border-b-[1px] border-gray-20">
+    <nav
+      className={`${bgStyle} xl-container z-40 fixed right-0 left-0  ease-in duration-300`}
+    >
       <div className="max-container py-6">
         <div className="flexBetween mx-4">
           <Link href="/">
             <Image
               src="/Logo-dark.svg"
               alt="LostInNL-logo"
-              width={80}
+              width={100}
               height={30}
             />
           </Link>
