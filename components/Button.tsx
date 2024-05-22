@@ -23,7 +23,7 @@ const Button = ({
     <button
       type={type}
       disabled={disabled}
-      className={`${variant} ${className} flexCenter gap-1 cursor-pointer`}
+      className={`${variant} ${className} ${disabled} flexCenter gap-1 cursor-pointer`}
       onClick={onClick}
     >
       {icon && <PiPlusBold />}

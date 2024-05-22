@@ -108,11 +108,11 @@
   /* BUTTONS */
 
   .btn-outline-light {
-    @apply text-cream border-2 border-cream px-5 py-2.5 rounded-full hover:text-shadow-sm shadow-gray-90 transition-all;
+    @apply text-cream border-2 border-cream px-5 py-2.5 rounded-full hover:text-shadow-sm shadow-gray-90 transition-all disabled:text-gray-20;
   }
 
   .btn-light {
-    @apply text-midnight border-2 border-cream bg-cream px-5 py-2 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all;
+    @apply text-midnight border-2 border-cream bg-cream px-5 py-2 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all disabled:text-gray-20 disabled:bg-gray-30 disabled:border-gray-30;
   }
 }
 
