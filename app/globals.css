@@ -102,7 +102,7 @@
   }
 
   .bold-content {
-    @apply bold-18 min-[350px]:bold-20 md:bold-28;
+    @apply bold-16 min-[350px]:bold-20 md:bold-28;
   }
 
   /* BUTTONS */

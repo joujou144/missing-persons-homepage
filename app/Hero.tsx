@@ -21,7 +21,7 @@ const Hero = () => {
         className="bg-bottom"
       />
 
-      <div className="mx-6 w-fit flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
+      <div className="mx-4 w-fit flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
         <h1 className="z-20 bold-20 min-[380px]:bold-24 md:bold-32 xl:bold-40">
           LostInNL Missing Persons
         </h1>

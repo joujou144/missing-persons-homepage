@@ -12,7 +12,7 @@ import {
 const About = () => {
   return (
     <section className="max-container py-8 lg:py-12">
-      <div className="mx-6 flex flex-col gap-6">
+      <div className="mx-4 flex flex-col gap-6">
         <Heading label="who we are" variant="header-light" />
 
         <h2 className="bold-20 md:bold-24 lg:bold-28 italic">
@@ -47,7 +47,7 @@ const About = () => {
                 {ABOUT_SLOGANS.map(({ label }) => (
                   <h3
                     key={label}
-                    className="bold-18 md:bold-20 lg:bold-24 xl:text-[28px] header-font italic"
+                    className="bold-16 md:bold-20 lg:bold-24 xl:text-[28px] header-font italic tracking-tight min-[400px]:-tracking-normal"
                   >
                     {label}
                   </h3>
