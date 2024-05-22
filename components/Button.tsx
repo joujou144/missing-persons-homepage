@@ -2,6 +2,7 @@ import { PiPlusBold } from "react-icons/pi";
 
 type ButtonProps = {
   className?: string;
+  disabled?: boolean;
   icon?: boolean;
   label: string;
   type: "submit" | "button";
@@ -11,6 +12,7 @@ type ButtonProps = {
 
 const Button = ({
   className,
+  disabled,
   icon,
   label,
   onClick,
@@ -20,6 +22,7 @@ const Button = ({
   return (
     <button
       type={type}
+      disabled={disabled}
       className={`${variant} ${className} flexCenter gap-1 cursor-pointer`}
       onClick={onClick}
     >

@@ -1,8 +1,17 @@
+"use client";
+
 import React, { useState } from "react";
 import Heading from "../components/Heading";
 import Image from "next/image";
 import { CONTACT, FOOTER_LINKS } from "@/constant";
 import Button from "../components/Button";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
+import { contactFormSchema } from "./utils/schemaValidation";
+import { z } from "zod";
+import { ContactForm } from "@/components/ContactForm";
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
   return (
@@ -56,43 +65,6 @@ export const ContactInformation = ({ className }: { className: string }) => {
         ))}
       </ul>
     </div>
-  );
-};
-
-export const ContactForm = ({ className }: { className: string }) => {
-  return (
-    <form
-      className={`${className} bg-gray-70 text-cream rounded-xl content-size`}
-    >
-      <input
-        id="guest_name"
-        type="text"
-        placeholder="Name"
-        className="p-2 bg-gray-70 border-b-[1px] border-gray-30 outline-none"
-      />
-
-      <input
-        id="guest_email"
-        type="email"
-        placeholder="Email"
-        className="p-2 bg-gray-70 border-b-[1px] border-gray-30 outline-none"
-      />
-
-      <textarea
-        // value={value}
-        placeholder="Message"
-        // onChange={handleChange}
-        rows={6}
-        className="p-2 bg-gray-70 border-b-[1px] border-gray-30 resize-none w-full outline-none"
-      />
-
-      <Button
-        type="submit"
-        label="Submit"
-        variant="btn-light"
-        className="min-[600px]:self-end"
-      />
-    </form>
   );
 };
 
