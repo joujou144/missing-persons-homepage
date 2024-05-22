@@ -45,25 +45,22 @@ const Navbar = () => {
             )}
           </div>
 
-          {openMenu && (
-            <div
-              className={
-                openMenu
-                  ? "lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center h-svh w-full bg-gray-70 transition ease-in duration-300"
-                  : "lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center h-svh w-full bg-gray-70 transition ease-in duration-300"
-              }
-            >
-              <div className="flex flex-col items-center gap-6">
-                <Navlinks
-                  parentStyle="flex flex-col items-center gap-6"
-                  linkStyle="mobile-links"
-                />
-                <Link href="/" className="mobile-links">
-                  Login
-                </Link>
-              </div>
+          <div
+            className={classnames({
+              "mobile-menu": openMenu,
+              "mobile-menu-close": !openMenu,
+            })}
+          >
+            <div className="flex flex-col items-center gap-6">
+              <Navlinks
+                parentStyle="flex flex-col items-center gap-6"
+                linkStyle="mobile-links"
+              />
+              <Link href="/" className="mobile-links">
+                Login
+              </Link>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </nav>
