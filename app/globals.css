@@ -112,7 +112,7 @@
   }
 
   .btn-light {
-    @apply text-midnight border-2 border-cream bg-cream px-5 py-2 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all disabled:text-gray-20 disabled:bg-gray-30 disabled:border-gray-30;
+    @apply text-midnight border-2 border-cream bg-cream px-5 py-2 rounded-full hover:text-shadow-sm shadow-gray-30 transition-all disabled:text-gray-20 disabled:bg-gray-30 disabled:border-gray-30 disabled:cursor-wait;
   }
 }
 
