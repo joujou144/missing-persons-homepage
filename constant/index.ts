@@ -5,6 +5,13 @@ export const NAV_LINKS = [
   { href: "/", key: "contact", label: "Contact" },
 ];
 
+// HERO HEADLINE
+export const HERO_HEADLINE = "LostInNL Missing Persons";
+
+// HERO SUBTEXT
+export const HERO_SUBTEXT =
+  " We store and disseminate information about individuals who go missing in Newfoundland.";
+
 // ABOUT HEADLINE
 export const ABOUT_HEADLINE =
   "Empowering communities through technology, we strive to bring hope by finding missing loved ones swiftly and effectively.";
