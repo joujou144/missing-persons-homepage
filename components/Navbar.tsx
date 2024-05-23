@@ -9,16 +9,14 @@ import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
 
 const Navbar = () => {
-  const [bgStyle, setBgStyle] = useState(
-    "bg-transparent border-b-[1px] border-gray-20"
-  );
+  const [bgStyle, setBgStyle] = useState("nav-default");
 
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 150) {
-        setBgStyle("bg-cream shadow-md shadow-gray-20");
+        setBgStyle("nav-onscroll");
       } else {
-        setBgStyle("bg-transparent border-b-[1px] border-gray-20");
+        setBgStyle("nav-default");
       }
     };
 
@@ -39,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${bgStyle} xl-container z-40 fixed right-0 left-0  ease-in duration-300`}
+      className={`${bgStyle} z-40 fixed right-0 left-0 ease-in duration-300`}
     >
       <div className="max-container py-4">
         <div className="flexBetween mx-4">
@@ -82,7 +80,7 @@ const Navlinks = ({ parentStyle, onClick, isMobile }: StyleProps) => {
             onClick={onClick}
             href={href}
             className={classnames({
-              links: true,
+              "nav-links": true,
               "mobile-links": isMobile,
             })}
           >

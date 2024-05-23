@@ -57,12 +57,20 @@ html {
     @apply flex items-center gap-6;
   }
 
-  .links {
-    @apply cursor-pointer content-font tracking-wider text-midnight hover:text-shadow-sm shadow-gray-50 transition-all;
+  .nav-links {
+    @apply cursor-pointer content-font tracking-wider text-midnight transition-all;
+  }
+
+  .nav-onscroll {
+    @apply max-w-[1380px] mx-auto bg-white top-4 rounded-full backdrop-filter backdrop-blur-md bg-opacity-70 border-b-0;
+  }
+
+  .nav-default {
+    @apply xl-container bg-transparent border-b-[1px] border-gray-20;
   }
 
   .mobile-links {
-    @apply cursor-pointer text-[20px] content-font tracking-wider text-cream hover:text-shadow-sm shadow-gray-20 transition-all;
+    @apply cursor-pointer text-[20px] content-font tracking-wider text-cream hover:text-gray-50 transition-all;
   }
 
   .mobile-menu {
@@ -74,6 +82,10 @@ html {
   }
 
   /* FONTS */
+
+  .links {
+    @apply cursor-pointer content-font tracking-wider text-midnight hover:text-gray-30 transition-all;
+  }
 
   .header-light {
     @apply bg-cream;
