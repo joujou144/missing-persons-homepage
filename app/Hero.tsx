@@ -12,12 +12,7 @@ const Hero = () => {
   return (
     <section className="xl-container relative flex items-center justify-center h-svh lg:h-screen">
       <div className="z-10 absolute inset-0 bg-black opacity-40 " />
-      <Image
-        src="/hero.jpg"
-        alt="background image"
-        fill={true}
-        objectFit="cover"
-      />
+      <Image src="/hero.jpg" alt="background image" fill={true} />
       <div className="mx-4 w-fit flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
         <h1 className="z-20 bold-20 min-[380px]:bold-24 md:bold-32 xl:bold-40">
           {HERO_HEADLINE}

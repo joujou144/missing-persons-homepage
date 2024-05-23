@@ -51,7 +51,8 @@ const Navbar = () => {
               src="/Logo-dark.svg"
               alt="LostInNL-logo"
               width={100}
-              height={30}
+              height={100}
+              className="w-auto h-auto"
             />
           </Link>
           <div className="max-lg:hidden nav-menu">

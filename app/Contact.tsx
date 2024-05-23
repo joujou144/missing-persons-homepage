@@ -27,9 +27,8 @@ export const ContactInformation = ({ className }: { className: string }) => {
           src="/phone-img.png"
           alt="contact"
           width={180}
-          height={50}
-          objectFit="contain"
-          className="rounded-xl"
+          height={180}
+          className="rounded-xl w-auto h-auto"
         />
 
         <ul className="content-size flex flex-col gap-4">

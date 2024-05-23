@@ -67,9 +67,9 @@ export const CallToAction = () => {
         <Image
           src="/Logo-light.svg"
           alt="LostInNL-logo"
-          width={120}
-          height={20}
-          className=""
+          width={100}
+          height={100}
+          className="w-auto h-auto"
         />
         <Button
           type="button"
@@ -95,7 +95,7 @@ export const Map = () => {
         src="/map.png"
         alt="map"
         width={800}
-        height={50}
+        height={100}
         className="w-full image-grayscale"
       />
       <div className="bg-gray-20 content-font text-[13px] md:text-[14px] py-2 text-midnight">
