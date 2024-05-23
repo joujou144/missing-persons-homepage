@@ -44,6 +44,7 @@ export const ContactForm = ({ className }: { className: string }) => {
       <div>
         <input
           id="name"
+          autoComplete="given-name"
           type="text"
           placeholder="Name"
           {...register("name")}
@@ -55,6 +56,7 @@ export const ContactForm = ({ className }: { className: string }) => {
       <div>
         <input
           id="email"
+          autoComplete="off"
           type="email"
           placeholder="Email"
           {...register("email")}
@@ -65,6 +67,7 @@ export const ContactForm = ({ className }: { className: string }) => {
 
       <div>
         <textarea
+          id="message"
           placeholder="Message"
           rows={6}
           {...register("message")}

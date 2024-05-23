@@ -5,7 +5,11 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "sonner";
 
-const allerta = Allerta_Stencil({ weight: ["400"], subsets: ["latin"] });
+const allerta = Allerta_Stencil({
+  weight: ["400"],
+  subsets: ["latin"],
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: "Missing",
