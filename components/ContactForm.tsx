@@ -27,9 +27,13 @@ export const ContactForm = ({ className }: { className: string }) => {
     // const result = await somefunction(data)
     try {
       setSubmitting(true);
-      //post data
+      //TODO: post data to server and remove mockup post
+
+      // mockup post
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       toast.success("Your message has been sent!");
       reset();
+      setSubmitting(false);
     } catch (error) {
       toast.error("Something went wrong. Please try again.");
       setSubmitting(false);
@@ -48,7 +52,7 @@ export const ContactForm = ({ className }: { className: string }) => {
           type="text"
           placeholder="Name"
           {...register("name")}
-          className="p-2 bg-gray-70 border-b-[1px] border-gray-30 outline-none w-full"
+          className="text-input form-input"
         />
         <ErrorMessage>{errors.name?.message}</ErrorMessage>
       </div>
@@ -60,7 +64,7 @@ export const ContactForm = ({ className }: { className: string }) => {
           type="email"
           placeholder="Email"
           {...register("email")}
-          className="p-2 bg-gray-70 border-b-[1px] border-gray-30 outline-none w-full"
+          className="form-input"
         />
         <ErrorMessage>{errors.email?.message}</ErrorMessage>
       </div>
@@ -71,7 +75,7 @@ export const ContactForm = ({ className }: { className: string }) => {
           placeholder="Message"
           rows={6}
           {...register("message")}
-          className="p-2 bg-gray-70 border-b-[1px] border-gray-30 w-full resize-none outline-none"
+          className="resize-none form-input"
         />
         <ErrorMessage>{errors.message?.message}</ErrorMessage>
       </div>

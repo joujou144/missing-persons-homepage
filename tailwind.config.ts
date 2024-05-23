@@ -44,6 +44,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require("autoprefixer"),
     plugin(function ({
       matchUtilities,
       theme,
