@@ -24,7 +24,7 @@ const Navbar = () => {
 
     const handleScroll = () => {
       changeColor();
-      if (window.scrollY < 100) {
+      if (window.scrollY === 0) {
         if (window.location.hash) {
           history.replaceState(null, "", " ");
         }
