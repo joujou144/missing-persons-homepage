@@ -10,6 +10,7 @@ import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
 
 const Navbar = () => {
+  const currentPath = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
   const [bgStyle, setBgStyle] = useState(
     "bg-transparent border-b-[1px] border-gray-20"
@@ -17,15 +18,25 @@ const Navbar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 150) {
         setBgStyle("bg-cream shadow-md shadow-gray-20");
       } else {
         setBgStyle("bg-transparent border-b-[1px] border-gray-20");
       }
     };
-    window.addEventListener("scroll", changeColor);
+
+    const handleScroll = () => {
+      changeColor();
+      if (window.scrollY < 100) {
+        if (window.location.hash) {
+          history.replaceState(null, "", " ");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", changeColor);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -43,8 +54,11 @@ const Navbar = () => {
               height={30}
             />
           </Link>
-          <div className="max-lg:hidden flex items-center gap-6">
-            <Navlinks parentStyle="flex items-center gap-6" linkStyle="links" />
+          <div className="max-lg:hidden nav-menu">
+            <Navlinks
+              parentStyle="nav-menu"
+              onClick={() => console.log(currentPath)}
+            />
             {/* Add AuthStatus */}
 
             <LuUser2 size={20} className="cursor-pointer" />
@@ -70,10 +84,11 @@ const Navbar = () => {
               "mobile-menu-close": !openMenu,
             })}
           >
-            <div className="flex flex-col items-center gap-6">
+            <div className="nav-menu flex-col">
               <Navlinks
-                parentStyle="flex flex-col items-center gap-6"
-                linkStyle="mobile-links"
+                isMobile
+                parentStyle="nav-menu flex-col"
+                onClick={() => setOpenMenu(false)}
               />
               <Link href="/" className="mobile-links">
                 Login
@@ -89,22 +104,23 @@ const Navbar = () => {
 type StyleProps = {
   parentStyle?: string;
   linkStyle?: string;
+  onClick?: () => void;
+  isMobile?: boolean;
 };
 
-const Navlinks = ({ parentStyle, linkStyle }: StyleProps) => {
-  const currentPath = usePathname();
-
+const Navlinks = ({ parentStyle, onClick, isMobile }: StyleProps) => {
   return (
     <ul className={parentStyle}>
       {NAV_LINKS.map(({ label, href, key }) => (
         <li key={key}>
           <Link
+            onClick={onClick}
             href={href}
-            // className={classnames({
-            //   "links": true,
-            //   "!text-shadow-sm": href === currentPath,
-            // })}
-            className={linkStyle}
+            className={classnames({
+              links: true,
+              "mobile-links": isMobile,
+              // "!text-shadow-sm": href === currentPath,
+            })}
           >
             {label}
           </Link>

@@ -51,6 +51,20 @@ html {
     @apply grayscale transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-90;
   }
 
+  /* NAVIGATION */
+
+  .nav-menu {
+    @apply flex items-center gap-6;
+  }
+
+  .links {
+    @apply cursor-pointer content-font tracking-wider text-midnight hover:text-shadow-sm shadow-gray-50 transition-all;
+  }
+
+  .mobile-links {
+    @apply cursor-pointer text-[20px] content-font tracking-wider text-cream hover:text-shadow-sm shadow-gray-20 transition-all;
+  }
+
   .mobile-menu {
     @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center h-svh w-full bg-gray-70 ease-in duration-500;
   }
@@ -60,14 +74,6 @@ html {
   }
 
   /* FONTS */
-
-  .links {
-    @apply cursor-pointer content-font tracking-wider text-midnight hover:text-shadow-sm shadow-gray-50 transition-all;
-  }
-
-  .mobile-links {
-    @apply cursor-pointer text-[20px] content-font tracking-wider text-cream hover:text-shadow-sm shadow-gray-20 transition-all;
-  }
 
   .header-light {
     @apply bg-cream;
