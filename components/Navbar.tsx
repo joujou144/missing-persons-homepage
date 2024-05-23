@@ -4,14 +4,11 @@ import { NAV_LINKS } from "@/constant";
 import classnames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
 
 const Navbar = () => {
-  const currentPath = usePathname();
-  const [openMenu, setOpenMenu] = useState(false);
   const [bgStyle, setBgStyle] = useState(
     "bg-transparent border-b-[1px] border-gray-20"
   );
@@ -44,7 +41,7 @@ const Navbar = () => {
     <nav
       className={`${bgStyle} xl-container z-40 fixed right-0 left-0  ease-in duration-300`}
     >
-      <div className="max-container py-6">
+      <div className="max-container py-4">
         <div className="flexBetween mx-4">
           <Link href="/">
             <Image
@@ -56,46 +53,14 @@ const Navbar = () => {
             />
           </Link>
           <div className="max-lg:hidden nav-menu">
-            <Navlinks
-              parentStyle="nav-menu"
-              onClick={() => console.log(currentPath)}
-            />
-            {/* Add AuthStatus */}
+            <Navlinks parentStyle="nav-menu" />
+            {/* TODO: Add AuthStatus */}
 
             <LuUser2 size={20} className="cursor-pointer" />
           </div>
 
           {/* Mobile button */}
-          <div
-            className="lg:hidden inline-block cursor-pointer z-10"
-            onClick={() => {
-              setOpenMenu(!openMenu);
-            }}
-          >
-            {openMenu ? (
-              <IoCloseSharp size={30} className="text-cream" />
-            ) : (
-              <IoMenuSharp size={25} />
-            )}
-          </div>
-
-          <div
-            className={classnames({
-              "mobile-menu": openMenu,
-              "mobile-menu-close": !openMenu,
-            })}
-          >
-            <div className="nav-menu flex-col">
-              <Navlinks
-                isMobile
-                parentStyle="nav-menu flex-col"
-                onClick={() => setOpenMenu(false)}
-              />
-              <Link href="/" className="mobile-links">
-                Login
-              </Link>
-            </div>
-          </div>
+          <MobileMenu />
         </div>
       </div>
     </nav>
@@ -104,7 +69,6 @@ const Navbar = () => {
 
 type StyleProps = {
   parentStyle?: string;
-  linkStyle?: string;
   onClick?: () => void;
   isMobile?: boolean;
 };
@@ -120,7 +84,6 @@ const Navlinks = ({ parentStyle, onClick, isMobile }: StyleProps) => {
             className={classnames({
               links: true,
               "mobile-links": isMobile,
-              // "!text-shadow-sm": href === currentPath,
             })}
           >
             {label}
@@ -128,6 +91,44 @@ const Navlinks = ({ parentStyle, onClick, isMobile }: StyleProps) => {
         </li>
       ))}
     </ul>
+  );
+};
+
+const MobileMenu = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  return (
+    <>
+      <div
+        className="lg:hidden inline-block cursor-pointer z-10"
+        onClick={() => {
+          setOpenMenu(!openMenu);
+        }}
+      >
+        {openMenu ? (
+          <IoCloseSharp size={30} className="text-cream" />
+        ) : (
+          <IoMenuSharp size={25} />
+        )}
+      </div>
+
+      <div
+        className={classnames({
+          "mobile-menu": openMenu,
+          "mobile-menu-close": !openMenu,
+        })}
+      >
+        <div className="nav-menu flex-col">
+          <Navlinks
+            isMobile
+            parentStyle="nav-menu flex-col"
+            onClick={() => setOpenMenu(false)}
+          />
+          <Link href="/" className="mobile-links">
+            Login
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 
