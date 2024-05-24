@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CTA_INTRO,
   CTA_TEXT,
@@ -72,11 +74,12 @@ export const CallToAction = () => {
           className="w-auto h-auto"
         />
         <Button
+          icon
           type="button"
-          variant="btn-light"
           label="Add Missing Person"
-          icon={true}
           className="lg:order-first"
+          onClick={() => console.log("clicked")}
+          // TODO: add routing
         />
       </div>
     </div>

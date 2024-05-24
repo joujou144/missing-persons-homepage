@@ -83,7 +83,6 @@ export const ContactForm = ({ className }: { className: string }) => {
       <Button
         type="submit"
         label="Submit"
-        variant="btn-light"
         className="min-[600px]:self-end"
         disabled={submitting}
       />
