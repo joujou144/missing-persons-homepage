@@ -82,9 +82,10 @@ const Navlinks = ({
       {NAV_LINKS.map(({ label, href, key }, index) => (
         <li
           key={key}
-          className={classnames(`delay-${index} ${linkStyle}`, {
+          className={classnames(`${linkStyle}`, {
             "nav-links": true,
             "mobile-links": isMobile,
+            [`delay-${index}`]: isMobile,
           })}
         >
           <Link onClick={onClick} href={href}>
