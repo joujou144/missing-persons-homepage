@@ -17,7 +17,7 @@ const config: Config = {
 
       colors: {
         midnight: "#090911",
-        cream: "#E0D9D9",
+        cream: "#FFF3EC",
         crimson: "#950720",
 
         gray: {
@@ -27,7 +27,7 @@ const config: Config = {
           50: "#585858",
           70: "#222020",
           90: "#141414",
-          200: "#111111",
+          200: "#121214",
         },
       },
       screens: {
