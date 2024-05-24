@@ -15,7 +15,7 @@ const About = () => {
       <div className="mx-4 flex flex-col gap-6">
         <Heading label="who we are" variant="header-light" />
 
-        <h2 className="bold-20 md:bold-24 lg:bold-28 italic">
+        <h2 className="text-cream bold-20 md:bold-24 lg:bold-28 italic">
           {ABOUT_HEADLINE}
         </h2>
 
@@ -47,7 +47,7 @@ const About = () => {
                 {ABOUT_SLOGANS.map(({ label }) => (
                   <h3
                     key={label}
-                    className="bold-16 md:bold-20 lg:bold-24 xl:text-[28px] header-font italic tracking-tight min-[400px]:-tracking-normal"
+                    className="text-cream bold-16 md:bold-20 lg:bold-24 xl:text-[28px] header-font italic tracking-tight min-[400px]:-tracking-normal"
                   >
                     {label}
                   </h3>

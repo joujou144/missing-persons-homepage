@@ -10,13 +10,16 @@ import { LuUser2 } from "react-icons/lu";
 
 const Navbar = () => {
   const [bgStyle, setBgStyle] = useState("nav-default");
+  const [navLogo, setNavLogo] = useState("/Logo-light.svg");
 
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 150) {
         setBgStyle("nav-onscroll");
+        setNavLogo("/Logo-dark.svg");
       } else {
         setBgStyle("nav-default");
+        setNavLogo("/Logo-light.svg");
       }
     };
 
@@ -43,7 +46,7 @@ const Navbar = () => {
         <div className="flexBetween mx-4">
           <Link href="/">
             <Image
-              src="/Logo-dark.svg"
+              src={navLogo}
               alt="LostInNL-logo"
               width={100}
               height={100}
@@ -54,7 +57,7 @@ const Navbar = () => {
             <Navlinks parentStyle="nav-menu" />
             {/* TODO: Add AuthStatus */}
 
-            <LuUser2 size={20} className="cursor-pointer" />
+            <LuUser2 size={20} className="cursor-pointer relative" />
           </div>
 
           {/* Mobile button */}

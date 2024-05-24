@@ -43,7 +43,7 @@ export const ContactForm = ({ className }: { className: string }) => {
   return (
     <form
       onSubmit={onSubmit}
-      className={`${className} bg-gray-70 text-cream rounded-xl content-size`}
+      className={`${className} bg-gray-70 rounded-xl content-size`}
     >
       <div>
         <input

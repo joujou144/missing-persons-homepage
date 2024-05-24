@@ -62,15 +62,15 @@ html {
   }
 
   .nav-links {
-    @apply cursor-pointer content-font tracking-wider text-midnight transition-all;
+    @apply cursor-pointer content-font tracking-wider transition-all;
   }
 
   .nav-onscroll {
-    @apply max-w-[1380px] mx-auto bg-white top-4 rounded-full backdrop-filter backdrop-blur-md bg-opacity-70 border-b-0;
+    @apply bg-gray-10 text-midnight backdrop-filter backdrop-blur-md bg-opacity-70 border-b-0;
   }
 
   .nav-default {
-    @apply xl-container bg-transparent border-b-[1px] border-gray-20;
+    @apply xl-container bg-transparent border-b-[1px] border-gray-20 text-cream;
   }
 
   .mobile-links {
@@ -151,7 +151,7 @@ html {
   }
 
   .form-input {
-    @apply p-2 w-full bg-gray-70 border-b-[1px] border-gray-30 outline-none placeholder-shown:border-gray-30 autofill:bg-transparent focus:ring-0;
+    @apply p-2 w-full bg-gray-70 border-b-[1px] border-gray-30 outline-none placeholder:text-cream placeholder-shown:border-gray-30 autofill:bg-transparent focus:ring-0;
   }
 }
 

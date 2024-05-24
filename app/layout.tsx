@@ -29,7 +29,9 @@ export default function RootLayout({
       <body className={`${allerta.className} bg-gray-200 relative `}>
         <Toaster position="bottom-right" />
         <Navbar />
-        <main className="text-cream relative overflow-hidden">{children}</main>
+        <main className="text-neutral-300 relative overflow-hidden">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

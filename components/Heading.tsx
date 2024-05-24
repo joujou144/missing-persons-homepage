@@ -9,13 +9,11 @@ type PillProps = {
 const Heading = ({ label, variant, className }: PillProps) => {
   return (
     <p
-      className={`flex items-center gap-4 text-[18px] uppercase mb-4 ${className}`}
+      className={`text-cream flex items-center gap-4 text-[18px] uppercase mb-4 ${className}`}
     >
       <span className={`${variant} h-[5px] rounded-sm w-20`}></span>
-
       {label}
     </p>
-    // <div className={`${variant} ${className} bold-16 lg:bold-20`}>{label}</div>
   );
 };
 
