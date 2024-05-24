@@ -26,6 +26,26 @@ html {
   font-family: "Assistant", sans-serif;
 }
 
+.delay-0 {
+  transition-delay: 0.2s;
+}
+
+.delay-1 {
+  transition-delay: 0.3s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.5s;
+}
+
+.delay-4 {
+  transition-delay: 0.6s;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -57,10 +77,6 @@ html {
 
   /* NAVIGATION */
 
-  .nav-menu {
-    @apply flex items-center gap-6;
-  }
-
   .nav-links {
     @apply uppercase text-sm cursor-pointer content-font tracking-wider transition-all;
   }
@@ -73,20 +89,16 @@ html {
     @apply xl-container bg-transparent border-b-[1px] border-gray-20 text-cream font-light;
   }
 
-  .nav-menu-mobile {
-    @apply flex flex-col items-end gap-6;
-  }
-
   .mobile-links {
-    @apply uppercase cursor-pointer text-[20px] content-font tracking-wider font-light text-cream hover:text-gray-50 transition-all mr-6;
+    @apply mr-20 text-right uppercase cursor-pointer text-[20px] content-font tracking-wider font-light text-cream hover:text-gray-50 mb-6 transition-all duration-700 ease-in;
   }
 
   .mobile-menu {
-    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 ease-in duration-500;
+    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end text-right items-center h-svh w-full bg-gray-70 transition-all ease-in duration-500 opacity-100;
   }
 
   .mobile-menu-close {
-    @apply lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 ease-in duration-500;
+    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 transition-all ease-in duration-500 opacity-0;
   }
 
   /* FONTS */

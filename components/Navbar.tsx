@@ -53,7 +53,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <Navlinks parentStyle="max-lg:hidden nav-menu" />
+          <Navlinks parentStyle="max-lg:hidden flex items-center gap-6" />
           {/* TODO: Add AuthStatus */}
 
           {/* Mobile button */}
@@ -66,23 +66,28 @@ const Navbar = () => {
 
 type StyleProps = {
   parentStyle?: string;
+  linkStyle?: string;
   onClick?: () => void;
   isMobile?: boolean;
 };
 
-const Navlinks = ({ parentStyle, onClick, isMobile }: StyleProps) => {
+const Navlinks = ({
+  parentStyle,
+  onClick,
+  isMobile,
+  linkStyle,
+}: StyleProps) => {
   return (
     <ul className={parentStyle}>
-      {NAV_LINKS.map(({ label, href, key }) => (
-        <li key={key}>
-          <Link
-            onClick={onClick}
-            href={href}
-            className={classnames({
-              "nav-links": true,
-              "mobile-links": isMobile,
-            })}
-          >
+      {NAV_LINKS.map(({ label, href, key }, index) => (
+        <li
+          key={key}
+          className={classnames(`delay-${index} ${linkStyle}`, {
+            "nav-links": true,
+            "mobile-links": isMobile,
+          })}
+        >
+          <Link onClick={onClick} href={href}>
             {label}
           </Link>
         </li>
@@ -96,16 +101,26 @@ const MobileMenu = () => {
   return (
     <>
       <div
-        className="lg:hidden inline-block cursor-pointer z-10"
+        className="lg:hidden cursor-pointer z-10 "
         onClick={() => {
           setOpenMenu(!openMenu);
         }}
       >
-        {openMenu ? (
-          <IoCloseSharp size={30} className="text-cream" />
-        ) : (
-          <IoMenuSharp size={25} />
-        )}
+        <IoMenuSharp
+          size={25}
+          className={classnames({
+            "opacity-100 absolute top-6": !openMenu,
+            "opacity-0 absolute": openMenu,
+          })}
+        />
+        <IoCloseSharp
+          size={30}
+          className={classnames({
+            "text-cream rotate-90 opacity-100 transition-all duration-500 ease-in":
+              openMenu,
+            "opacity-0": !openMenu,
+          })}
+        />
       </div>
 
       <div
@@ -116,7 +131,10 @@ const MobileMenu = () => {
       >
         <Navlinks
           isMobile
-          parentStyle="nav-menu-mobile"
+          linkStyle={classnames({
+            "opacity-0": !openMenu,
+            "translate-x-14 opacity-100": openMenu,
+          })}
           onClick={() => setOpenMenu(false)}
         />
       </div>
