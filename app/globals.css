@@ -62,27 +62,31 @@ html {
   }
 
   .nav-links {
-    @apply cursor-pointer content-font tracking-wider transition-all;
+    @apply uppercase text-sm cursor-pointer content-font tracking-wider transition-all;
   }
 
-  .nav-onscroll {
-    @apply bg-gray-10 text-midnight backdrop-filter backdrop-blur-md bg-opacity-70 border-b-0;
+  .nav-bg-onscroll {
+    @apply bg-gray-10 text-midnight backdrop-filter backdrop-blur-md bg-opacity-70 border-b-0 font-normal;
   }
 
-  .nav-default {
-    @apply xl-container bg-transparent border-b-[1px] border-gray-20 text-cream;
+  .nav-bg-default {
+    @apply xl-container bg-transparent border-b-[1px] border-gray-20 text-cream font-light;
+  }
+
+  .nav-menu-mobile {
+    @apply flex flex-col items-end gap-6;
   }
 
   .mobile-links {
-    @apply cursor-pointer text-[20px] content-font tracking-wider text-cream hover:text-gray-50 transition-all;
+    @apply uppercase cursor-pointer text-[20px] content-font tracking-wider font-light text-cream hover:text-gray-50 transition-all mr-6;
   }
 
   .mobile-menu {
-    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center h-svh w-full bg-gray-70 ease-in duration-500;
+    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 ease-in duration-500;
   }
 
   .mobile-menu-close {
-    @apply lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center h-svh w-full bg-gray-70 ease-in duration-500;
+    @apply lg:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 ease-in duration-500;
   }
 
   /* FONTS */

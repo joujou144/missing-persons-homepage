@@ -6,19 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
-import { LuUser2 } from "react-icons/lu";
 
 const Navbar = () => {
-  const [bgStyle, setBgStyle] = useState("nav-default");
+  const [bgStyle, setBgStyle] = useState("nav-bg-default");
   const [navLogo, setNavLogo] = useState("/Logo-light.svg");
 
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 150) {
-        setBgStyle("nav-onscroll");
+        setBgStyle("nav-bg-onscroll");
         setNavLogo("/Logo-dark.svg");
       } else {
-        setBgStyle("nav-default");
+        setBgStyle("nav-bg-default");
         setNavLogo("/Logo-light.svg");
       }
     };
@@ -53,12 +52,9 @@ const Navbar = () => {
               className="w-auto h-auto"
             />
           </Link>
-          <div className="max-lg:hidden nav-menu">
-            <Navlinks parentStyle="nav-menu" />
-            {/* TODO: Add AuthStatus */}
 
-            <LuUser2 size={20} className="cursor-pointer relative" />
-          </div>
+          <Navlinks parentStyle="max-lg:hidden nav-menu" />
+          {/* TODO: Add AuthStatus */}
 
           {/* Mobile button */}
           <MobileMenu />
@@ -118,16 +114,11 @@ const MobileMenu = () => {
           "mobile-menu-close": !openMenu,
         })}
       >
-        <div className="nav-menu flex-col">
-          <Navlinks
-            isMobile
-            parentStyle="nav-menu flex-col"
-            onClick={() => setOpenMenu(false)}
-          />
-          <Link href="/" className="mobile-links">
-            Login
-          </Link>
-        </div>
+        <Navlinks
+          isMobile
+          parentStyle="nav-menu-mobile"
+          onClick={() => setOpenMenu(false)}
+        />
       </div>
     </>
   );

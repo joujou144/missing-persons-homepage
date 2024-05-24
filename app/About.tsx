@@ -22,7 +22,9 @@ const About = () => {
         <div className="flex justify-between gap-10 content-size max-[950px]:flex-col">
           <div className="flex flex-col gap-6 lg:justify-between lg:w-1/2">
             {ABOUT_LEFT_CONTENT.map(({ content }) => (
-              <p key={content}>{content}</p>
+              <p key={content} className="font-light">
+                {content}
+              </p>
             ))}
 
             <p className="bg-cream p-6 text-midnight rounded-xl">
@@ -31,7 +33,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col gap-10 min-[680px]:flex-row min-[680px]:justify-between min-[950px]:flex-col lg:w-1/2">
-            <p className="min-[680px]:w-[45%] min-[950px]:w-full">
+            <p className="min-[680px]:w-[45%] min-[950px]:w-full font-light">
               {ABOUT_RIGHT_CONTENT}
             </p>
 

@@ -18,7 +18,7 @@ const Hero = () => {
         <h1 className="z-20 bold-20 min-[380px]:bold-24 md:bold-32 xl:bold-40">
           {HERO_HEADLINE}
         </h1>
-        <p className="z-20 text-[14px] md:text-[18px] max-w-xs md:max-w-md lg:max-w-[55%] content-font tracking-wider">
+        <p className="z-20 text-[14px] md:text-[18px] max-w-xs md:max-w-md lg:max-w-[55%] content-font tracking-wider font-light">
           {HERO_SUBTEXT}
         </p>
         <Button

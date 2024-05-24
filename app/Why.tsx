@@ -60,8 +60,8 @@ const Why = () => {
 export const CallToAction = () => {
   return (
     <div className="content-size pb-6 lg:pb-4 flex flex-col gap-6">
-      <p className="p-6 bg-gray-70 rounded-xl">{CTA_INTRO}</p>
-      <p className="md:w-3/4 lg:w-full xl:w-3/4 text-center lg:text-left lg:self-start sm:self-center">
+      <p className="p-6 bg-gray-70 rounded-xl font-light">{CTA_INTRO}</p>
+      <p className="md:w-3/4 lg:w-full xl:w-3/4 text-center lg:text-left lg:self-start sm:self-center font-light">
         {CTA_TEXT}
       </p>
 

@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { href: "/#why", key: "why", label: "Why" },
   { href: "/", key: "missing", label: "Missing" },
   { href: "/#contact", key: "contact", label: "Contact" },
+  { href: "/", key: "login", label: "Login" },
 ];
 
 // HERO HEADLINE

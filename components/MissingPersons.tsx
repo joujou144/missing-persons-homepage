@@ -24,13 +24,15 @@ const MissingPersons = ({ missing, className }: MissingPersonProps) => {
             />
             <DatePill createdAt={createdAt} />
             <div className="flexBetween py-2 border-[1px] border-b-gray-10">
-              <p>{name}</p>
+              <p className="font-lighter">{name}</p>
               <RxDotsHorizontal size={20} />
             </div>
 
             <div className="text-[14px] py-2 flex gap-1 items-center">
               <GrLocationPin />
-              <p className="content-font tracking-wider">{location}</p>
+              <p className="content-font tracking-wider font-light">
+                {location}
+              </p>
             </div>
           </li>
         ))}
@@ -41,7 +43,7 @@ const MissingPersons = ({ missing, className }: MissingPersonProps) => {
 
 export const DatePill = ({ createdAt }: { createdAt: string }) => {
   return (
-    <span className="absolute top-2 left-2 bg-gray-50 bg-opacity-80 text-white px-2 py-1.5 rounded-lg text-[11px]">
+    <span className="content-font tracking-wider absolute top-2 left-2 bg-gray-50 bg-opacity-80 text-white px-2 py-1.5 rounded-lg text-[11px]">
       {createdAt}
     </span>
   );
