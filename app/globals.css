@@ -78,7 +78,7 @@ html {
   /* NAVIGATION */
 
   .nav-links {
-    @apply uppercase text-sm cursor-pointer content-font tracking-wider transition-all;
+    @apply uppercase text-sm cursor-pointer content-font tracking-wider transition-all hover:text-midnight;
   }
 
   .nav-bg-onscroll {
