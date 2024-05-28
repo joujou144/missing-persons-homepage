@@ -108,11 +108,11 @@ html {
   }
 
   .header-light {
-    @apply bg-cream;
+    @apply bg-cream text-cream;
   }
 
   .header-dark {
-    @apply bg-midnight;
+    @apply bg-midnight text-midnight;
   }
 
   .bold-40 {

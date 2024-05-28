@@ -14,7 +14,6 @@ const config: Config = {
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
         lg: "0 12px 16px var(--tw-shadow-color)",
       },
-
       colors: {
         midnight: "#090911",
         cream: "#FFF3EC",
