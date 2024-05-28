@@ -82,11 +82,11 @@ html {
   }
 
   .nav-bg-onscroll {
-    @apply bg-gray-10 text-midnight backdrop-filter backdrop-blur-md bg-opacity-70 border-b-0 font-normal;
+    @apply bg-gray-200 backdrop-filter backdrop-blur-md bg-opacity-50 border-b-0;
   }
 
   .nav-bg-default {
-    @apply xl-container bg-transparent border-b-[1px] border-gray-20 text-cream font-light;
+    @apply xl-container bg-transparent border-b-[1px] border-gray-20;
   }
 
   .mobile-links {

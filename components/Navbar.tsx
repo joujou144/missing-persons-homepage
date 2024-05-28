@@ -9,16 +9,13 @@ import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const [bgStyle, setBgStyle] = useState("nav-bg-default");
-  const [navLogo, setNavLogo] = useState("/Logo-light.svg");
 
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 150) {
         setBgStyle("nav-bg-onscroll");
-        setNavLogo("/Logo-dark.svg");
       } else {
         setBgStyle("nav-bg-default");
-        setNavLogo("/Logo-light.svg");
       }
     };
 
@@ -39,13 +36,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${bgStyle} z-40 fixed right-0 left-0 ease-in duration-300`}
+      className={`${bgStyle} z-40 fixed right-0 left-0 ease-in duration-300 text-cream font-light`}
     >
       <div className="max-container py-4">
         <div className="flexBetween mx-4">
           <Link href="/">
             <Image
-              src={navLogo}
+              src="/Logo-light.svg"
               alt="LostInNL-logo"
               width={100}
               height={100}
@@ -54,7 +51,6 @@ const Navbar = () => {
           </Link>
 
           <Navlinks parentStyle="max-lg:hidden flex items-center gap-6" />
-          {/* TODO: Add AuthStatus */}
 
           {/* Mobile button */}
           <MobileMenu />
@@ -88,6 +84,7 @@ const Navlinks = ({
             [`delay-${index}`]: isMobile,
           })}
         >
+          {/* TODO: add open new window on Login + Missing href */}
           <Link onClick={onClick} href={href}>
             {label}
           </Link>
