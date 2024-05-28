@@ -86,7 +86,7 @@ html {
   }
 
   .nav-bg-default {
-    @apply xl-container bg-transparent border-b-[1px] border-gray-20;
+    @apply bg-transparent border-b-[1px] border-gray-20;
   }
 
   .mobile-links {
@@ -94,11 +94,11 @@ html {
   }
 
   .mobile-menu {
-    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end text-right items-center h-svh w-full bg-gray-70 transition-all ease-in duration-500 opacity-100;
+    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end text-right items-center h-svh w-full bg-gray-70 transition-all ease-in duration-500 opacity-100 pointer-events-auto;
   }
 
   .mobile-menu-close {
-    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 transition-all ease-in duration-500 opacity-0;
+    @apply lg:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-end items-center h-svh w-full bg-gray-70 transition-all ease-in duration-500 opacity-0 pointer-events-none;
   }
 
   /* FONTS */

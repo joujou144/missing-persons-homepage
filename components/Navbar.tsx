@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${bgStyle} z-40 fixed right-0 left-0 ease-in duration-300 text-cream font-light`}
+      className={`${bgStyle} z-30 xl-container fixed right-0 left-0 ease-in duration-300 text-cream font-light`}
     >
       <div className="max-container py-4">
         <div className="flexBetween mx-4">
@@ -53,7 +53,7 @@ const Navbar = () => {
           <Navlinks parentStyle="max-lg:hidden flex items-center gap-6" />
 
           {/* Mobile button */}
-          <MobileMenu />
+          <MobileMenu className="lg:hidden cursor-pointer z-10" />
         </div>
       </div>
     </nav>
@@ -94,12 +94,12 @@ const Navlinks = ({
   );
 };
 
-const MobileMenu = () => {
+const MobileMenu = ({ className }: { className: string }) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <>
-      <div
-        className="lg:hidden cursor-pointer z-10 "
+      <button
+        className={className}
         onClick={() => {
           setOpenMenu(!openMenu);
         }}
@@ -119,7 +119,7 @@ const MobileMenu = () => {
             "opacity-0": !openMenu,
           })}
         />
-      </div>
+      </button>
 
       <div
         className={classnames({
