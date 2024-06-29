@@ -104,7 +104,7 @@ html {
   /* FONTS */
 
   .links {
-    @apply cursor-pointer content-font tracking-wider text-primary-700 hover:text-gray-30 transition-all;
+    @apply cursor-pointer content-font tracking-wider text-dark-200 hover:text-gray-30 transition-all;
   }
 
   .header-light {

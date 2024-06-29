@@ -16,11 +16,11 @@ export const NAV_LINKS = [
 ];
 
 // HERO HEADLINE
-export const HERO_HEADLINE = "LostInNL Missing Persons";
+export const HERO_HEADLINE = "Missing Persons Platform";
 
 // HERO SUBTEXT
 export const HERO_SUBTEXT =
-  " We store and disseminate information about individuals who go missing in Newfoundland.";
+  " We store and disseminate information about individuals who go missing in the UK.";
 
 // ABOUT HEADLINE
 export const ABOUT_HEADLINE =

@@ -7,14 +7,14 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="xl-container text-primary-700 relative flex items-center justify-center h-svh lg:h-screen">
+    <section className="xl-container text-primary-600 relative flex items-center justify-center h-svh lg:h-screen">
       <div className="z-10 absolute inset-0 bg-gray-200 opacity-70 " />
       <Image src="/hero.jpg" alt="background image" fill />
       <div className="mx-4 w-fit flex flex-col items-start gap-6 lg:items-center lg:text-center lg:mx-auto">
         <h1 className="z-20 bold-20 min-[380px]:bold-24 md:bold-32 xl:bold-40">
           {HERO_HEADLINE}
         </h1>
-        <p className="z-20 text-[14px] md:text-[18px] max-w-xs md:max-w-md lg:max-w-[55%] content-font tracking-wider font-light">
+        <p className="z-20 text-[14px] md:text-[18px] max-w-xs md:max-w-md lg:max-w-[55%] content-font text-primary-500 tracking-wider font-light">
           {HERO_SUBTEXT}
         </p>
         <Link

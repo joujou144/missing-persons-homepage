@@ -22,8 +22,8 @@ const Why = () => {
       <div className="max-container">
         <div className="mx-4 lg:flex lg:justify-between xl:gap-10">
           <div className="lg:w-[40%] xl:w-1/2 border-2 flex flex-col gap-6 lg:justify-between">
-            <div className=" bg-primary-300 rounded-xl p-6 flex flex-col text-primary-700">
-              <Heading variant="header-light" label="the reason" />
+            <div className=" bg-slate-300 rounded-xl p-6 flex flex-col text-dark-100">
+              <Heading variant="header-dark" label="the reason" />
 
               <ul>
                 {REASONS.map(({ reason }) => (
