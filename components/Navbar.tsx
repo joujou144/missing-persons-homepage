@@ -127,7 +127,7 @@ const MobileMenu = ({ className }: { className: string }) => {
         <IoCloseSharp
           size={30}
           className={classnames({
-            "text-cream rotate-90 opacity-100 transition-all duration-500 ease-in":
+            "text-primary-700 rotate-90 opacity-100 transition-all duration-500 ease-in":
               openMenu,
             "opacity-0": !openMenu,
           })}

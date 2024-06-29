@@ -26,12 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${allerta.className} bg-gray-200 relative `}>
+      <body
+        className={`${allerta.className} bg-dark-100 text-primary-600 relative `}
+      >
         <Toaster position="bottom-right" />
         <Navbar />
-        <main className="text-neutral-300 relative overflow-hidden">
-          {children}
-        </main>
+        <main className="relative overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>
