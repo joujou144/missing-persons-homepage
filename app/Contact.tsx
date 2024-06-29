@@ -33,7 +33,7 @@ export const ContactInformation = ({ className }: { className: string }) => {
             alt="contact"
             width={180}
             height={180}
-            className="rounded-xl w-auto h-auto"
+            className="rounded-xl w-auto h-auto brightness-75"
           />
           <ul className="content-size flex flex-col gap-4">
             {CONTACT.map(({ content }) => (
@@ -45,7 +45,7 @@ export const ContactInformation = ({ className }: { className: string }) => {
         </div>
       </div>
 
-      <ul className="content-size flex flex-col gap-4 md:flex-row justify-between">
+      <ul className="content-size mt-6 lg:mt-0 flex flex-col gap-4 md:flex-row justify-between">
         {FOOTER_LINKS.map(({ title, links }) => (
           <li key={title}>
             <h4 className="font-bold mb-2">{title}</h4>
