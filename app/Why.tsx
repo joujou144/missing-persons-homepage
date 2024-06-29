@@ -8,6 +8,7 @@ import {
   MAP_TEXT,
   persons,
   REASONS,
+  statistics,
   WHY_SLOGANS,
 } from "@/constant";
 import Image from "next/image";
@@ -15,6 +16,7 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import MissingPersons from "../components/MissingPersons";
 import Link from "next/link";
+import InfoBoard from "@/components/InfoBoard";
 
 const Why = () => {
   return (
@@ -49,7 +51,29 @@ const Why = () => {
             className="lg:w-1/2 order-first py-6 min-[900px]:py-0"
           />
         </div>
-        <p className="text-center capitalize bold-content mt-6 mb-10 text-primary-700">
+        <InfoBoard
+          title="missing people by the numbers"
+          className="mt-10 mb-4 mx-4"
+        />
+        {/* Statistics cards */}
+        <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-primary-700 mx-4">
+          {statistics.map(({ label, number }) => (
+            <li
+              key={label}
+              className="bg-dark-300 px-5 py-4 rounded-lg shadow-md h-[120px] flex flex-col justify-between"
+            >
+              <h4 className="text-sm md:text-[16px] overflow-hidden text-ellipsis mb-2">
+                {label}
+              </h4>
+              <p className="text-[22px] font-bold">{number}</p>
+            </li>
+          ))}
+        </ul>
+        <p className="my-4 text-xs md:text-sm content-font tracking-wider mx-4">
+          LostTracker only accepts cases that have been verified with law
+          enforcement and entered into the NCA system.
+        </p>
+        <p className="text-center capitalize bold-content my-10 text-primary-700">
           {MAP_TEXT}
         </p>
       </div>
@@ -58,7 +82,7 @@ const Why = () => {
   );
 };
 
-export const CallToAction = () => {
+const CallToAction = () => {
   return (
     <div className="content-size pb-6 lg:pb-4 flex flex-col gap-6">
       <p className="p-6 bg-surface-mixed-200 rounded-xl font-light">
@@ -93,7 +117,7 @@ export const CallToAction = () => {
   );
 };
 
-export const Map = () => {
+const Map = () => {
   return (
     <>
       <div className="bg-slate-200 content-font text-[13px] md:text-[14px] py-2 text-dark-200">
@@ -101,13 +125,13 @@ export const Map = () => {
           <p className="mx-4">{MAP_DATE}</p>
         </div>
       </div>
-      <Image
+      {/* <Image
         src="/map.png"
         alt="map"
         width={800}
         height={100}
         className="w-full image-grayscale"
-      />
+      /> */}
       <div className="bg-slate-200 content-font text-[13px] md:text-[14px] py-2 text-dark-200">
         <div className="max-container">
           <p className="mx-4 text-right">{MAP_INFO}</p>
