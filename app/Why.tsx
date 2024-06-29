@@ -14,6 +14,7 @@ import Image from "next/image";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import MissingPersons from "../components/MissingPersons";
+import Link from "next/link";
 
 const Why = () => {
   return (
@@ -73,14 +74,18 @@ export const CallToAction = () => {
           height={100}
           className="w-auto h-auto"
         />
-        <Button
-          icon
-          type="button"
-          label="Add Missing Person"
-          className="lg:order-first"
-          onClick={() => console.log("clicked")}
-          // TODO: add routing
-        />
+        <Link
+          href="https://react-losttracker.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            icon
+            type="button"
+            label="Add Missing Person"
+            className="lg:order-first"
+          />
+        </Link>
       </div>
     </div>
   );
