@@ -2,9 +2,17 @@
 export const NAV_LINKS = [
   { href: "/#about", key: "about", label: "About" },
   { href: "/#why", key: "why", label: "Why" },
-  { href: "/", key: "missing", label: "Missing" },
+  {
+    href: "/https://react-losttracker.vercel.app",
+    key: "missing",
+    label: "Missing",
+  },
   { href: "/#contact", key: "contact", label: "Contact" },
-  { href: "/", key: "login", label: "Login" },
+  {
+    href: "https://react-losttracker.vercel.app",
+    key: "login",
+    label: "Login",
+  },
 ];
 
 // HERO HEADLINE
