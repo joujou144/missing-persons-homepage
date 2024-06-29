@@ -11,7 +11,7 @@ import { toast } from "sonner";
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
-export const ContactForm = ({ className }: { className: string }) => {
+const ContactForm = ({ className }: { className: string }) => {
   const [submitting, setSubmitting] = useState(false);
 
   const {
@@ -89,3 +89,5 @@ export const ContactForm = ({ className }: { className: string }) => {
     </form>
   );
 };
+
+export default ContactForm;

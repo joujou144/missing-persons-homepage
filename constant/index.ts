@@ -1,5 +1,4 @@
 import { LatLngTuple } from "leaflet";
-import { getRandomNumber } from "@/constant/getRandomNumber";
 
 // NAVIGATION
 export const NAV_LINKS = [
@@ -141,14 +140,14 @@ export const persons: PersonProps[] = [
   },
 ];
 
-export const statistics = [
-  { label: "Approximate Total Records", number: getRandomNumber(1000, 5000) },
+export const STATISTICS = [
+  { label: "Approximate Total Records", number: "4328" },
   {
     label: "Approximate Canceled or Cleared",
-    number: getRandomNumber(1000, 5000),
+    number: "3247",
   },
-  { label: "Approximate Located", number: getRandomNumber(1000, 5000) },
-  { label: "Approximate Active Cases", number: getRandomNumber(1000, 5000) },
+  { label: "Approximate Located", number: "2340" },
+  { label: "Approximate Active Cases", number: "1540" },
 ];
 
 // FOOTER SECTION

@@ -1,5 +1,6 @@
 "use client";
 
+import InfoBoard from "@/components/InfoBoard";
 import {
   CTA_INTRO,
   CTA_TEXT,
@@ -8,15 +9,14 @@ import {
   MAP_TEXT,
   persons,
   REASONS,
-  statistics,
+  STATISTICS,
   WHY_SLOGANS,
 } from "@/constant";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import MissingPersons from "../components/MissingPersons";
-import Link from "next/link";
-import InfoBoard from "@/components/InfoBoard";
 
 const Why = () => {
   return (
@@ -55,17 +55,19 @@ const Why = () => {
           title="missing people by the numbers"
           className="mt-10 mb-4 mx-4"
         />
-        {/* Statistics cards */}
+
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-primary-700 mx-4">
-          {statistics.map(({ label, number }) => (
+          {STATISTICS.map(({ label, number }, idx) => (
             <li
-              key={label}
+              key={idx}
               className="bg-dark-300 px-5 py-4 rounded-lg shadow-md h-[120px] flex flex-col justify-between"
             >
-              <h4 className="text-sm md:text-[16px] overflow-hidden text-ellipsis mb-2">
+              <p className="text-[22px] font-bold content-font tracking-wider">
+                {number}
+              </p>
+              <span className="text-sm md:text-[16px] overflow-hidden text-ellipsis mb-2 content-font tracking-wider">
                 {label}
-              </h4>
-              <p className="text-[22px] font-bold">{number}</p>
+              </span>
             </li>
           ))}
         </ul>
