@@ -75,21 +75,34 @@ const Navlinks = ({
 }: StyleProps) => {
   return (
     <ul className={parentStyle}>
-      {NAV_LINKS.map(({ label, href, key }, index) => (
-        <li
-          key={key}
-          className={classnames(`${linkStyle}`, {
-            "nav-links": true,
-            "mobile-links": isMobile,
-            [`delay-${index}`]: isMobile,
-          })}
-        >
-          {/* TODO: add open new window on Login + Missing href */}
-          <Link onClick={onClick} href={href}>
-            {label}
-          </Link>
-        </li>
-      ))}
+      {NAV_LINKS.map(({ label, href, key }, index) => {
+        const isExternal = key === "login" || key === "missing";
+        return (
+          <li
+            key={key}
+            className={classnames(`${linkStyle}`, {
+              "nav-links": true,
+              "mobile-links": isMobile,
+              [`delay-${index}`]: isMobile,
+            })}
+          >
+            {isExternal ? (
+              <Link
+                onClick={onClick}
+                href={href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {label}
+              </Link>
+            ) : (
+              <Link onClick={onClick} href={href}>
+                {label}
+              </Link>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 };

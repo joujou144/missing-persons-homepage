@@ -3,7 +3,7 @@ export const NAV_LINKS = [
   { href: "/#about", key: "about", label: "About" },
   { href: "/#why", key: "why", label: "Why" },
   {
-    href: "/https://react-losttracker.vercel.app",
+    href: "https://react-losttracker.vercel.app",
     key: "missing",
     label: "Missing",
   },
