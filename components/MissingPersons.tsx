@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PersonProps } from "@/constant";
 import { GrLocationPin } from "react-icons/gr";
 import { RxDotsHorizontal } from "react-icons/rx";
+import Heading from "./Heading";
 
 type MissingPersonProps = {
   missing: PersonProps[];
@@ -12,6 +13,12 @@ type MissingPersonProps = {
 const MissingPersons = ({ missing, className }: MissingPersonProps) => {
   return (
     <div className={`${className} grid place-content-center`}>
+      <Heading
+        variant="header-light"
+        label="latest missing cases"
+        className="lg:hidden pb-8 min-[800px]:pt-6 lg:py-0"
+      />
+
       <ul className="w-full grid gap-6 grid-cols-1 md:grid-cols-2 min-[850px]:grid-cols-3 lg:grid-cols-2">
         {missing.map(({ name, imageSrc, location, createdAt }) => (
           <li key={name} className="relative content-font">
@@ -20,7 +27,7 @@ const MissingPersons = ({ missing, className }: MissingPersonProps) => {
               alt={name}
               width={300}
               height={50}
-              className="flex-1 h-auto w-[300px] md:w-[250px] xl:w-[290px] image-grayscale"
+              className="flex-1 h-auto w-[300px] image-grayscale"
             />
             <DatePill createdAt={createdAt} />
             <div className="flexBetween py-2 border-[1px] border-b-gray-10">

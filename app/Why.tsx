@@ -20,8 +20,8 @@ const Why = () => {
   return (
     <section id="why" className="xl-container relative pt-[5.5rem]">
       <div className="max-container">
-        <div className="mx-4 lg:flex lg:justify-between xl:gap-10">
-          <div className="lg:w-[40%] xl:w-1/2 border-2 flex flex-col gap-6 lg:justify-between">
+        <div className="mx-4 lg:flex lg:gap-6 lg:items-start xl:gap-10">
+          <div className="lg:w-1/2 border-2 flex flex-col gap-6 lg:justify-between">
             <div className=" bg-slate-300 rounded-xl p-6 flex flex-col text-dark-100">
               <Heading variant="header-dark" label="the reason" />
 
@@ -46,7 +46,7 @@ const Why = () => {
 
           <MissingPersons
             missing={persons}
-            className="lg:w-[55%] xl:w-1/2 order-first md:my-6 lg:my-0"
+            className="lg:w-1/2 order-first py-6 min-[900px]:py-0"
           />
         </div>
         <p className="text-center capitalize bold-content mt-6 mb-10 text-primary-700">
