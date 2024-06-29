@@ -1,8 +1,6 @@
+import { ContactForm, Heading } from "@/components";
 import { CONTACT, FOOTER_LINKS } from "@/constant";
 import Image from "next/image";
-import Heading from "../components/Heading";
-
-import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (

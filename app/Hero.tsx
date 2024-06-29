@@ -2,7 +2,7 @@
 
 import { HERO_HEADLINE, HERO_SUBTEXT } from "@/constant";
 import Image from "next/image";
-import Button from "../components/Button";
+import { Button } from "@/components";
 import Link from "next/link";
 
 const Hero = () => {

@@ -14,9 +14,7 @@ import {
 } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../components/Button";
-import Heading from "../components/Heading";
-import MissingPersons from "../components/MissingPersons";
+import { Button, Heading, MissingPersons } from "@/components";
 
 const Why = () => {
   return (

@@ -1,6 +1,4 @@
-import React from "react";
-import Heading from "../components/Heading";
-import Image from "next/image";
+import { Heading } from "@/components";
 import {
   ABOUT_HEADLINE,
   ABOUT_LEFT_CONTENT,
@@ -8,6 +6,7 @@ import {
   ABOUT_SLOGANS,
   BOX_CONTENT,
 } from "@/constant";
+import Image from "next/image";
 
 const About = () => {
   return (
