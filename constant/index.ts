@@ -1,3 +1,5 @@
+import { LatLngTuple } from "leaflet";
+
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/#about", key: "about", label: "About" },
@@ -90,56 +92,63 @@ export type PersonProps = {
   imageSrc: string;
   location: string;
   createdAt: string;
+  geocode?: LatLngTuple;
 };
 
 export const persons: PersonProps[] = [
   {
-    name: "Alice Smith",
+    name: "Rwanda James",
     imageSrc: "/jane-doe-1.png",
-    location: "Newfoundland",
-    createdAt: "Jan 2024",
+    location: "Chemlsford, UK",
+    createdAt: "10 Jun 2024",
+    geocode: [51.433727, -0.214443] as LatLngTuple,
   },
   {
-    name: "Brad Smith",
+    name: "Adi Sasoko",
     imageSrc: "/jon-doe-1.png",
-    location: "Newfoundland",
-    createdAt: "Jan 2024",
+    location: "Richmond, UK",
+    createdAt: "1 Jun 2024",
+    geocode: [51.433727, -0.214443] as LatLngTuple,
   },
   {
-    name: "Jacob Smith",
+    name: "Daniel Mensah",
     imageSrc: "/jon-doe-2.png",
-    location: "Newfoundland",
-    createdAt: "Jan 2024",
+    location: "Slough, UK",
+    createdAt: "2 Apr 2024",
+    geocode: [51.510536, -0.595041] as LatLngTuple,
   },
   {
-    name: "Jessica Smith",
+    name: "Anna Lee",
     imageSrc: "/jane-doe-3.png",
-    location: "Newfoundland",
-    createdAt: "Jan 2024",
+    location: "Brighton, UK",
+    createdAt: "22 Jan 2024",
+    geocode: [51.433727, -0.214443] as LatLngTuple,
   },
   {
-    name: "Isaac Smith",
+    name: "Isaac Craig",
     imageSrc: "/jon-doe-3.png",
-    location: "Newfoundland",
-    createdAt: "Jan 2024",
+    location: "London, UK",
+    createdAt: "16 March 2024",
+    geocode: [51.433727, -0.214443] as LatLngTuple,
   },
   {
-    name: "Penelope Smith",
+    name: "Aisha Patel",
     imageSrc: "/jane-doe-2.png",
-    location: "Newfoundland",
-    createdAt: "Jan 2024",
+    location: "St Albans, UK",
+    createdAt: "16 Jan 2024",
+    geocode: [51.433727, -0.214443] as LatLngTuple,
   },
 ];
 
 // FOOTER SECTION
-export const COPYRIGHT = "Copyright © 2024 LostinNL. All Rights Reserved.";
+export const COPYRIGHT = "Copyright © 2024 LostTracker. All Rights Reserved.";
 
 export const CONTACT = [
   {
     content:
       "  Email, call or complete the form to learn how we could assist you.",
   },
-  { content: "info@lostinnl.com" },
+  { content: "info@losttracker.com" },
   { content: "(+123) 456 789" },
 ];
 
