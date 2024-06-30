@@ -3,11 +3,11 @@
 import Button from "./Button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { contactFormSchema } from "@/app/utils/schemaValidation";
 import { z } from "zod";
 import { useState } from "react";
 import ErrorMessage from "./ErrorMessage";
 import { toast } from "sonner";
+import { contactFormSchema } from "@/utils/schemaValidation";
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
