@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
+import { Fragment } from "react";
 
 const Navbar = () => {
   const [bgStyle, setBgStyle] = useState("nav-bg-default");
@@ -110,7 +111,7 @@ const Navlinks = ({
 const MobileMenu = ({ className }: { className: string }) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <>
+    <Fragment>
       <button
         className={className}
         onClick={() => {
@@ -149,7 +150,7 @@ const MobileMenu = ({ className }: { className: string }) => {
           onClick={() => setOpenMenu(false)}
         />
       </div>
-    </>
+    </Fragment>
   );
 };
 

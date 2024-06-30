@@ -18,6 +18,7 @@ import "leaflet/dist/leaflet.css";
 import Image from "next/image";
 import Link from "next/link";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { Fragment } from "react";
 
 const Why = () => {
   return (
@@ -129,7 +130,7 @@ const customIcon = L.icon({
 
 const Map = () => {
   return (
-    <>
+    <Fragment>
       <div className="bg-slate-200 content-font text-[13px] md:text-[14px] py-2 text-dark-200">
         <div className="max-container">
           <p className="mx-4">{MAP_DATE}</p>
@@ -173,7 +174,7 @@ const Map = () => {
           <p className="mx-4 text-right">{MAP_INFO}</p>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 

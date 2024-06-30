@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { Allerta_Stencil } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer } from "@/components";
+import { Footer } from "@/components";
 import { Toaster } from "sonner";
+import dynamic from "next/dynamic";
 
 const allerta = Allerta_Stencil({
   weight: ["400"],
   subsets: ["latin"],
   preload: false,
+});
+
+const DynamicNavbar = dynamic(() => import("../components/Navbar"), {
+  ssr: false,
 });
 
 export const metadata: Metadata = {
@@ -29,7 +34,7 @@ export default function RootLayout({
         className={`${allerta.className} bg-dark-100 text-primary-600 relative `}
       >
         <Toaster position="bottom-right" />
-        <Navbar />
+        <DynamicNavbar />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />
       </body>
