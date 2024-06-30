@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { Hero, Navbar, About, Why, Contact } from "@/components";
+import { Hero, About, Why, Contact } from "@/components";
 import { Fragment } from "react";
 
 export default function Home() {
@@ -8,16 +8,10 @@ export default function Home() {
     loading: () => <p>Loading..</p>,
   });
 
-  const DynamicHero = dynamic(() => import("../components/Hero"), {
-    ssr: false,
-    loading: () => <p>Loading..</p>,
-  });
   return (
     <Fragment>
-      <Navbar />
+      <DynamicNavbar />
       <Hero />
-      {/* <DynamicNavbar />
-      <DynamicHero /> */}
       <About />
       <Why />
       <Contact />

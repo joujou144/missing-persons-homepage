@@ -10,40 +10,40 @@ import { Fragment } from "react";
 import { Suspense } from "react";
 
 const Navbar = () => {
-  // const [bgStyle, setBgStyle] = useState("nav-bg-default");
+  const [bgStyle, setBgStyle] = useState("nav-bg-default");
 
-  // useEffect(() => {
-  //   const changeColor = () => {
-  //     if (typeof window !== "undefined" && window.scrollY >= 150) {
-  //       setBgStyle("nav-bg-onscroll");
-  //     } else {
-  //       setBgStyle("nav-bg-default");
-  //     }
-  //   };
+  useEffect(() => {
+    const changeColor = () => {
+      if (typeof window !== "undefined" && window.scrollY >= 150) {
+        setBgStyle("nav-bg-onscroll");
+      } else {
+        setBgStyle("nav-bg-default");
+      }
+    };
 
-  //   const handleScroll = () => {
-  //     if (typeof window !== "undefined") {
-  //       changeColor();
-  //       if (window.scrollY === 0) {
-  //         if (window.location.hash) {
-  //           history.replaceState(null, "", " ");
-  //         }
-  //       }
-  //     }
-  //   };
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        changeColor();
+        if (window.scrollY === 0) {
+          if (window.location.hash) {
+            history.replaceState(null, "", " ");
+          }
+        }
+      }
+    };
 
-  //   if (typeof window !== "undefined") {
-  //     window.addEventListener("scroll", handleScroll);
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }
-  // }, []);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
 
   return (
     <Suspense>
       <nav
-        className={` z-30 xl-container fixed right-0 left-0 ease-in duration-300 text-cream font-light`}
+        className={`${bgStyle} z-30 xl-container fixed right-0 left-0 ease-in duration-300 text-cream font-light`}
       >
         <div className="max-container py-4">
           <div className="flexBetween mx-4">
