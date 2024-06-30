@@ -31,6 +31,7 @@ export const ContactInformation = ({ className }: { className: string }) => {
             alt="contact"
             width={180}
             height={180}
+            priority={false}
             className="rounded-xl w-auto h-auto brightness-75"
           />
           <ul className="content-size flex flex-col gap-4">
