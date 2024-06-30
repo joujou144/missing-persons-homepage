@@ -112,7 +112,7 @@ html {
   }
 
   .header-dark {
-    @apply bg-surface-mixed-100 bg-surface-mixed-100;
+    @apply bg-surface-mixed-100;
   }
 
   .bold-40 {
