@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
-    "@radix-ui/themes": "^3.0.3",
     "classnames": "^2.5.1",
     "leaflet": "^1.9.4",
     "next": "^14.2.4",
