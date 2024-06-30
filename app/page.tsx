@@ -1,8 +1,5 @@
 import dynamic from "next/dynamic";
-import About from "./About";
-import Contact from "./Contact";
-import Hero from "./Hero";
-import Why from "./Why";
+import { Hero, About, Why, Contact } from "@/components";
 import { Fragment } from "react";
 
 export default function Home() {
