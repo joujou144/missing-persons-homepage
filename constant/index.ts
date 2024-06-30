@@ -92,7 +92,7 @@ export type PersonProps = {
   imageSrc: string;
   location: string;
   createdAt: string;
-  geocode?: LatLngTuple;
+  geocode: LatLngTuple;
 };
 
 export const persons: PersonProps[] = [

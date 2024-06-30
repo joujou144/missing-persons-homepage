@@ -15,6 +15,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Heading, MissingPersons } from "@/components";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Why = () => {
   return (
@@ -125,13 +127,56 @@ const Map = () => {
           <p className="mx-4">{MAP_DATE}</p>
         </div>
       </div>
-      {/* <Image
-        src="/map.png"
-        alt="map"
-        width={800}
-        height={100}
-        className="w-full image-grayscale"
-      /> */}
+      <MapContainer
+        center={[51.505, -0.09]}
+        zoom={9}
+        scrollWheelZoom={false}
+        className="h-[500px] grayscale hover:grayscale-0"
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {persons.map(({ name, geocode, imageSrc, location, createdAt }) => (
+          <Marker position={geocode} key={name}>
+            <Popup>
+              <div className=" w-[200px] flex gap-2 items center ">
+                <Image
+                  src={imageSrc}
+                  className="rounded-full"
+                  alt={`${name}'s photo`}
+                  width={100}
+                  height={50}
+                />
+                <div className="text-xxs">
+                  <p className="font-medium">{name}</p>
+                  <p>
+                    Missing since{" "}
+                    <span className="font-medium">{createdAt}</span>
+                  </p>
+                </div>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+        {/* {combinedData &&
+          combinedData.map(({ geocode, name, imageUrl, date }) => (
+            <Marker position={geocode} key={name}>
+              <Popup>
+                <div className=" w-[200px] flex gap-2 items center ">
+                  <img src={imageUrl} className="w-[80px] rounded-full" />
+                  <div className="text-xxs">
+                    <p className="font-medium">{name}</p>
+                    <p>
+                      Missing since <span className="font-medium">{date}</span>
+                    </p>
+                  </div>
+                </div>
+              </Popup>
+            </Marker>
+          ))} */}
+      </MapContainer>
+
       <div className="bg-slate-200 content-font text-[13px] md:text-[14px] py-2 text-dark-200">
         <div className="max-container">
           <p className="mx-4 text-right">{MAP_INFO}</p>
