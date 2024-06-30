@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { Hero, About, Why, Contact } from "@/components";
 import { Fragment } from "react";
+import { Suspense } from "react";
 
 export default function Home() {
   const DynamicNavbar = dynamic(() => import("../components/Navbar"), {
@@ -8,12 +9,12 @@ export default function Home() {
     loading: () => <p>Loading..</p>,
   });
   return (
-    <Fragment>
+    <Suspense>
       <DynamicNavbar />
       <Hero />
       <About />
       <Why />
       <Contact />
-    </Fragment>
+    </Suspense>
   );
 }
