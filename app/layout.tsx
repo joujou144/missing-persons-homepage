@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Allerta_Stencil } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import { Navbar, Footer } from "@/components";
 import { Toaster } from "sonner";
 
 const allerta = Allerta_Stencil({

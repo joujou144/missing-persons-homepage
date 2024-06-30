@@ -1,5 +1,6 @@
 "use client";
 
+import { Button, Heading, MissingPersons } from "@/components";
 import InfoBoard from "@/components/InfoBoard";
 import {
   CTA_INTRO,
@@ -12,13 +13,11 @@ import {
   STATISTICS,
   WHY_SLOGANS,
 } from "@/constant";
-import Image from "next/image";
-import Link from "next/link";
-import { Button, Heading, MissingPersons } from "@/components";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { GiPerson } from "react-icons/gi";
+import Image from "next/image";
+import Link from "next/link";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const Why = () => {
   return (
