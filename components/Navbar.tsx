@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 150) {
+      if (typeof window !== "undefined" && window.scrollY >= 150) {
         setBgStyle("nav-bg-onscroll");
       } else {
         setBgStyle("nav-bg-default");
@@ -21,10 +21,12 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-      changeColor();
-      if (window.scrollY === 0) {
-        if (window.location.hash) {
-          history.replaceState(null, "", " ");
+      if (typeof window !== "undefined") {
+        changeColor();
+        if (window.scrollY === 0) {
+          if (window.location.hash) {
+            history.replaceState(null, "", " ");
+          }
         }
       }
     };
