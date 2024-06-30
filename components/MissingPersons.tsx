@@ -25,9 +25,9 @@ const MissingPersons = ({ missing, className }: MissingPersonProps) => {
             <Image
               src={imageSrc}
               alt={name}
-              width={300}
-              height={50}
-              className="flex-1 h-auto w-[300px] image-grayscale"
+              width={200}
+              height={200}
+              className="flex-1 h-[190px] w-full image-grayscale rounded-lg"
             />
             <DatePill createdAt={createdAt} />
             <div className="flexBetween py-2 border-[1px] border-b-gray-10">

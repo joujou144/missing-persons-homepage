@@ -42,7 +42,7 @@ const About = () => {
                 alt="hope-image"
                 width={100}
                 height={20}
-                className="rounded-xl md:w-[30%] xl:w-[28%]"
+                className="rounded-xl md:w-[30%] xl:w-[28%] h-auto"
               />
               <div className="flex flex-col justify-between">
                 {ABOUT_SLOGANS.map(({ label }) => (
