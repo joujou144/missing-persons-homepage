@@ -101,14 +101,14 @@ export const persons: PersonProps[] = [
     imageSrc: "/jane-doe-1.png",
     location: "Chemlsford, UK",
     createdAt: "10 Jun 2024",
-    geocode: [51.433727, -0.214443] as LatLngTuple,
+    geocode: [51.736099, 0.4798] as LatLngTuple,
   },
   {
     name: "Adi Sasoko",
     imageSrc: "/jon-doe-1.png",
     location: "Richmond, UK",
     createdAt: "1 Jun 2024",
-    geocode: [51.433727, -0.214443] as LatLngTuple,
+    geocode: [51.4781, -0.2909] as LatLngTuple,
   },
   {
     name: "Daniel Mensah",
@@ -122,7 +122,7 @@ export const persons: PersonProps[] = [
     imageSrc: "/jane-doe-3.png",
     location: "Brighton, UK",
     createdAt: "22 Jan 2024",
-    geocode: [51.433727, -0.214443] as LatLngTuple,
+    geocode: [50.8317, -0.2185] as LatLngTuple,
   },
   {
     name: "Isaac Craig",
@@ -136,7 +136,7 @@ export const persons: PersonProps[] = [
     imageSrc: "/jane-doe-2.png",
     location: "St Albans, UK",
     createdAt: "16 Jan 2024",
-    geocode: [51.433727, -0.214443] as LatLngTuple,
+    geocode: [51.74016, -0.34783] as LatLngTuple,
   },
 ];
 

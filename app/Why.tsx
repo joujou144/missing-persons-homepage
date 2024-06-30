@@ -16,7 +16,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button, Heading, MissingPersons } from "@/components";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { GiPerson } from "react-icons/gi";
 
 const Why = () => {
   return (
@@ -119,6 +121,13 @@ const CallToAction = () => {
   );
 };
 
+const customIcon = L.icon({
+  iconUrl: "/man-icon.svg",
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32],
+});
+
 const Map = () => {
   return (
     <>
@@ -129,18 +138,18 @@ const Map = () => {
       </div>
       <MapContainer
         center={[51.505, -0.09]}
-        zoom={9}
+        zoom={8}
         scrollWheelZoom={false}
-        className="h-[500px] grayscale hover:grayscale-0"
+        className="h-[500px]"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {persons.map(({ name, geocode, imageSrc, location, createdAt }) => (
-          <Marker position={geocode} key={name}>
+        {persons.map(({ name, geocode, imageSrc, createdAt }) => (
+          <Marker position={geocode} key={name} icon={customIcon}>
             <Popup>
-              <div className=" w-[200px] flex gap-2 items center ">
+              <div className=" w-[200px] flex gap-2 items center">
                 <Image
                   src={imageSrc}
                   className="rounded-full"
@@ -151,30 +160,13 @@ const Map = () => {
                 <div className="text-xxs">
                   <p className="font-medium">{name}</p>
                   <p>
-                    Missing since{" "}
-                    <span className="font-medium">{createdAt}</span>
+                    Missing since <span className="font-bold">{createdAt}</span>
                   </p>
                 </div>
               </div>
             </Popup>
           </Marker>
         ))}
-        {/* {combinedData &&
-          combinedData.map(({ geocode, name, imageUrl, date }) => (
-            <Marker position={geocode} key={name}>
-              <Popup>
-                <div className=" w-[200px] flex gap-2 items center ">
-                  <img src={imageUrl} className="w-[80px] rounded-full" />
-                  <div className="text-xxs">
-                    <p className="font-medium">{name}</p>
-                    <p>
-                      Missing since <span className="font-medium">{date}</span>
-                    </p>
-                  </div>
-                </div>
-              </Popup>
-            </Marker>
-          ))} */}
       </MapContainer>
 
       <div className="bg-slate-200 content-font text-[13px] md:text-[14px] py-2 text-dark-200">
